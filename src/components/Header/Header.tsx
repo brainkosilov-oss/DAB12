@@ -99,7 +99,7 @@ export function Header() {
           </div>
         </div>
 
-        <MegaMenu open={megaOpen} onClose={closeMega} />
+        <MegaMenu open={megaOpen} onClose={closeMega} onEnter={openMega} />
       </header>
 
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />

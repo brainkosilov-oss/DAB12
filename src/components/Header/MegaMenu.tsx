@@ -5,13 +5,14 @@ import { ArrowRight } from '../Icons'
 interface MegaMenuProps {
   open: boolean
   onClose: () => void
+  onEnter: () => void
 }
 
-export function MegaMenu({ open, onClose }: MegaMenuProps) {
+export function MegaMenu({ open, onClose, onEnter }: MegaMenuProps) {
   return (
     <div
       className={`mega-menu ${open ? 'open' : ''}`}
-      onMouseEnter={() => {}}
+      onMouseEnter={onEnter}
       onMouseLeave={onClose}
       aria-hidden={!open}
     >
@@ -49,6 +50,14 @@ export function MegaMenu({ open, onClose }: MegaMenuProps) {
           transform: translateY(-8px);
           transition: opacity var(--t-fast), transform var(--t-fast), visibility var(--t-fast);
           pointer-events: none;
+        }
+        .mega-menu::before {
+          content: '';
+          position: absolute;
+          top: -16px;
+          left: 0;
+          right: 0;
+          height: 16px;
         }
         .mega-menu.open {
           opacity: 1;
