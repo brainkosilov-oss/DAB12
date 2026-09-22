@@ -32,7 +32,7 @@ export function MegaMenu({ open, onClose, onEnter }: MegaMenuProps) {
             ))}
           </div>
           <Link to="/catalog" className="mega-menu-all" onClick={onClose}>
-            <span>→ Смотреть весь каталог</span>
+            <span>→ Смотреть весь каталог изделий</span>
             <ArrowRight size={18} />
           </Link>
         </div>

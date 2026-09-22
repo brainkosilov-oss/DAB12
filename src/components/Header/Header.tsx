@@ -36,7 +36,8 @@ export function Header() {
   }
 
   const navItems = [
-    { label: 'Каталог', action: 'mega', to: '/catalog' },
+    { label: 'Каталог изделий', action: 'mega', to: '/catalog' },
+    { label: 'Каталог услуг', to: '/services' },
     { label: 'Работы', to: '/works' },
     { label: 'Производство', to: '/production' },
     { label: 'О компании', to: '/about' },

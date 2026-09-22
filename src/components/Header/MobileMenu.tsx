@@ -13,7 +13,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
     { label: 'Работы', to: '/works' },
     { label: 'Производство', to: '/production' },
     { label: 'О компании', to: '/about' },
-    { label: 'Услуги', to: '/services' },
+    { label: 'Каталог услуг', to: '/services' },
     { label: 'Доставка и монтаж', to: '/delivery-installation' },
     { label: 'Документы', to: '/documents' },
     { label: 'Контакты', to: '/contacts' },
@@ -31,7 +31,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
         </div>
         <div className="mobile-menu-body">
           <div className="mobile-menu-section">
-            <span className="label mobile-menu-label">Каталог</span>
+            <span className="label mobile-menu-label">Каталог изделий</span>
             <div className="mobile-menu-cats">
               {categories.map((cat) => (
                 <Link key={cat.id} to={`/catalog/${cat.slug}`} className="mobile-menu-cat" onClick={onClose}>
