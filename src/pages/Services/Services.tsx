@@ -1,95 +1,56 @@
 import { Link } from 'react-router-dom'
 import { Reveal } from '../../components/Reveal'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
-import { services, processSteps } from '../../data/site'
+import { Placeholder } from '../../components/Placeholder'
 import { ArrowUpRight } from '../../components/Icons'
+import { serviceCategories } from '../../data/serviceCategories'
+import type { ServiceCategory } from '../../data/types'
 
 export function Services() {
   return (
-    <div className="services-page">
+    <div className="services-catalog-page">
       <div className="container">
-        <Breadcrumbs items={[{ label: 'Главная', to: '/' }, { label: 'Услуги' }]} />
+        <Breadcrumbs items={[{ label: 'Главная', to: '/' }, { label: 'Каталог услуг' }]} />
       </div>
 
-      <section className="services-hero">
+      <section className="services-catalog-hero dark">
         <div className="container">
           <Reveal>
-            <span className="label" style={{ color: 'var(--c-text-secondary)' }}>УСЛУГИ</span>
+            <span className="label label-accent">КАТАЛОГ УСЛУГ</span>
           </Reveal>
           <Reveal delay={100}>
-            <h1 className="h1 services-hero-title">УСЛУГИ</h1>
+            <h1 className="h1 services-catalog-title">Услуги под ключ<br />от проекта до сдачи объекта.</h1>
           </Reveal>
           <Reveal delay={200}>
-            <p className="body-lg services-hero-text">
-              Полный цикл — от проектирования до монтажа.
+            <p className="body-lg services-catalog-text">
+              Полный цикл строительных работ — проектирование, монтаж, сдача.
             </p>
           </Reveal>
         </div>
         <style>{`
-          .services-hero { padding: 24px 0 48px; }
-          .services-hero-title { margin-top: 16px; }
-          .services-hero-text { color: var(--c-text-secondary); margin-top: 16px; }
+          .services-catalog-hero { padding: 24px 0 48px; }
+          .services-catalog-title { margin-top: 16px; color: var(--c-text-dark); }
+          .services-catalog-text { color: var(--c-text-dark-secondary); margin-top: 16px; }
         `}</style>
       </section>
 
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section">
         <div className="container">
-          <div className="services-grid">
-            {services.map((s, i) => (
-              <Reveal key={s.id} delay={i * 60}>
-                <div className="service-card">
-                  <span className="service-card-num">{String(i + 1).padStart(2, '0')}</span>
-                  <h3 className="h3 service-card-title">{s.name}</h3>
-                  <p className="body service-card-desc">{s.description}</p>
-                </div>
+          <div className="services-catalog-grid">
+            {serviceCategories.map((cat, i) => (
+              <Reveal key={cat.id} delay={i * 50}>
+                <ServiceCard category={cat} />
               </Reveal>
             ))}
           </div>
         </div>
         <style>{`
-          .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-          .service-card {
-            display: flex; flex-direction: column; gap: 12px;
-            padding: 32px;
-            background: var(--c-white);
-            border: 1px solid var(--c-border);
-            border-radius: 12px;
-            transition: border-color var(--t-fast), transform var(--t-med);
+          .services-catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
           }
-          .service-card:hover { border-color: var(--c-text); transform: translateY(-4px); }
-          .service-card-num { font-size: 13px; font-weight: 700; color: var(--c-accent); }
-          .service-card-title { color: var(--c-text); }
-          .service-card-desc { color: var(--c-text-secondary); }
-          @media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
-          @media (max-width: 640px) { .services-grid { grid-template-columns: 1fr; } }
-        `}</style>
-      </section>
-
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <Reveal>
-            <span className="label" style={{ color: 'var(--c-text-secondary)' }}>ПРОЦЕСС</span>
-          </Reveal>
-          <div className="services-process">
-            {processSteps.map((step, i) => (
-              <Reveal key={step.num} delay={i * 60}>
-                <div className="services-process-step">
-                  <span className="services-process-num">{step.num}</span>
-                  <span className="services-process-name">{step.name}</span>
-                  <span className="services-process-desc">{step.description}</span>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-        <style>{`
-          .services-process { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin-top: 32px; }
-          .services-process-step { display: flex; flex-direction: column; gap: 8px; padding: 24px 16px 24px 0; border-top: 1px solid var(--c-border); }
-          .services-process-num { font-size: 13px; font-weight: 700; color: var(--c-accent); }
-          .services-process-name { font-size: 16px; font-weight: 700; }
-          .services-process-desc { font-size: 13px; color: var(--c-text-secondary); }
-          @media (max-width: 1024px) { .services-process { grid-template-columns: repeat(3, 1fr); } }
-          @media (max-width: 640px) { .services-process { grid-template-columns: 1fr; } }
+          @media (max-width: 768px) { .services-catalog-grid { grid-template-columns: 1fr; } }
         `}</style>
       </section>
 
@@ -110,5 +71,51 @@ export function Services() {
         `}</style>
       </section>
     </div>
+  )
+}
+
+function ServiceCard({ category }: { category: ServiceCategory }) {
+  return (
+    <Link to={`/services/${category.slug}`} className="service-cat-card">
+      <div className="service-cat-card-image">
+        <Placeholder label={category.shortName.toUpperCase()} aspect="16/9" />
+      </div>
+      <div className="service-cat-card-info">
+        <span className="service-cat-card-num">{category.id}</span>
+        <h3 className="h4 service-cat-card-title">{category.name}</h3>
+        <p className="body-sm service-cat-card-desc">{category.heroDescription}</p>
+        <span className="service-cat-card-cta">
+          ПОДРОБНЕЕ <ArrowUpRight size={16} />
+        </span>
+      </div>
+      <style>{`
+        .service-cat-card {
+          display: flex;
+          flex-direction: column;
+          transition: transform var(--t-med);
+        }
+        .service-cat-card:hover { transform: translateY(-4px); }
+        .service-cat-card-image { overflow: hidden; border-radius: 12px; }
+        .service-cat-card-image .placeholder { transition: transform var(--t-med); }
+        .service-cat-card:hover .service-cat-card-image .placeholder { transform: scale(1.04); }
+        .service-cat-card-info { display: flex; flex-direction: column; gap: 8px; padding-top: 16px; }
+        .service-cat-card-num { font-size: 13px; font-weight: 700; color: var(--c-accent); }
+        .service-cat-card-title { color: var(--c-text); }
+        .service-cat-card-desc { color: var(--c-text-secondary); }
+        .service-cat-card-cta {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 13px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          color: var(--c-text);
+          margin-top: 4px;
+          transition: gap var(--t-fast);
+        }
+        .service-cat-card:hover .service-cat-card-cta { gap: 12px; color: var(--c-accent); }
+      `}</style>
+    </Link>
   )
 }

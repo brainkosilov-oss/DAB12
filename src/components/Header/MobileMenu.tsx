@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { categories } from '../../data/categories'
+import { serviceCategories } from '../../data/serviceCategories'
 import { companyInfo } from '../../data/site'
 import { Close, Phone, ArrowUpRight } from '../Icons'
 
@@ -13,7 +14,6 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
     { label: 'Работы', to: '/works' },
     { label: 'Производство', to: '/production' },
     { label: 'О компании', to: '/about' },
-    { label: 'Каталог услуг', to: '/services' },
     { label: 'Доставка и монтаж', to: '/delivery-installation' },
     { label: 'Документы', to: '/documents' },
     { label: 'Контакты', to: '/contacts' },
@@ -35,6 +35,17 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             <div className="mobile-menu-cats">
               {categories.map((cat) => (
                 <Link key={cat.id} to={`/catalog/${cat.slug}`} className="mobile-menu-cat" onClick={onClose}>
+                  {cat.shortName}
+                  <ArrowUpRight size={16} />
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="mobile-menu-section">
+            <span className="label mobile-menu-label">Каталог услуг</span>
+            <div className="mobile-menu-cats">
+              {serviceCategories.map((cat) => (
+                <Link key={cat.id} to={`/services/${cat.slug}`} className="mobile-menu-cat" onClick={onClose}>
                   {cat.shortName}
                   <ArrowUpRight size={16} />
                 </Link>

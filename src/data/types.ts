@@ -42,3 +42,25 @@ export interface Service {
   name: string
   description: string
 }
+
+export interface ServiceCategory {
+  id: string
+  name: string
+  shortName: string
+  slug: string
+  description: string
+  heroDescription: string
+  keywords: string[]
+  serviceTypes: ServiceType[]
+  faq: { q: string; a: string }[]
+}
+
+export interface ServiceType {
+  id: string
+  name: string
+  slug: string
+  description: string
+  characteristics: string[]
+  priceLabel: string
+  keywords: string[]
+}

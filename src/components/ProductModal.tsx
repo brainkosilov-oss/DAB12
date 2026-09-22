@@ -33,7 +33,7 @@ export function ProductModal({ product, categoryName, onClose }: ProductModalPro
     { label: 'Вес', value: product.weight },
     { label: 'Материал', value: product.material },
     { label: 'Покрытие', value: product.coating },
-  ]
+  ].filter((s) => s.value)
 
   return (
     <div className="modal-overlay" onClick={onClose}>

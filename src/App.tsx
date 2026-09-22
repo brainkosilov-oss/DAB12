@@ -10,6 +10,7 @@ import { Works } from './pages/Works/Works'
 import { Production } from './pages/Production/Production'
 import { About } from './pages/About/About'
 import { Services } from './pages/Services/Services'
+import { ServiceCategory } from './pages/Services/ServiceCategory'
 import { DeliveryInstallation } from './pages/DeliveryInstallation/DeliveryInstallation'
 import { Documents } from './pages/Documents/Documents'
 import { Contacts } from './pages/Contacts/Contacts'
@@ -54,6 +55,7 @@ export default function App() {
           <Route path="/production" element={<Production />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:slug" element={<ServiceCategory />} />
           <Route path="/delivery-installation" element={<DeliveryInstallation />} />
           <Route path="/documents" element={<Documents />} />
           <Route path="/contacts" element={<Contacts />} />

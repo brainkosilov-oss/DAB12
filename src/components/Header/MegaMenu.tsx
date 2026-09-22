@@ -1,14 +1,22 @@
 import { Link } from 'react-router-dom'
-import { categories } from '../../data/categories'
 import { ArrowRight } from '../Icons'
+
+interface MegaMenuItem {
+  id: string
+  shortName: string
+  slug: string
+}
 
 interface MegaMenuProps {
   open: boolean
   onClose: () => void
   onEnter: () => void
+  items: MegaMenuItem[]
+  basePath: string
+  allLinkText: string
 }
 
-export function MegaMenu({ open, onClose, onEnter }: MegaMenuProps) {
+export function MegaMenu({ open, onClose, onEnter, items, basePath, allLinkText }: MegaMenuProps) {
   return (
     <div
       className={`mega-menu ${open ? 'open' : ''}`}
@@ -19,11 +27,12 @@ export function MegaMenu({ open, onClose, onEnter }: MegaMenuProps) {
       <div className="container">
         <div className="mega-menu-grid">
           <div className="mega-menu-cats">
-            {categories.map((cat) => (
+            {items.map((cat) => (
               <Link
                 key={cat.id}
-                to={`/catalog/${cat.slug}`}
+                to={`${basePath}/${cat.slug}`}
                 className="mega-menu-cat"
+                onClick={onClose}
               >
                 <span className="mega-menu-cat-num">{cat.id}</span>
                 <span className="mega-menu-cat-name">{cat.shortName}</span>
@@ -31,8 +40,8 @@ export function MegaMenu({ open, onClose, onEnter }: MegaMenuProps) {
               </Link>
             ))}
           </div>
-          <Link to="/catalog" className="mega-menu-all" onClick={onClose}>
-            <span>→ Смотреть весь каталог изделий</span>
+          <Link to={basePath} className="mega-menu-all" onClick={onClose}>
+            <span>{allLinkText}</span>
             <ArrowRight size={18} />
           </Link>
         </div>

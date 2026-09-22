@@ -5,16 +5,18 @@ import { useScrollPosition } from '../../hooks/useScrollPosition'
 import { ChevronDown, Menu, Phone } from '../Icons'
 import { MegaMenu } from './MegaMenu'
 import { MobileMenu } from './MobileMenu'
+import { categories } from '../../data/categories'
+import { serviceCategories } from '../../data/serviceCategories'
 
 export function Header() {
   const scrolled = useScrollPosition(10)
-  const [megaOpen, setMegaOpen] = useState(false)
+  const [activeMega, setActiveMega] = useState<'products' | 'services' | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
   const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
-    setMegaOpen(false)
+    setActiveMega(null)
     setMobileOpen(false)
   }, [location.pathname])
 
@@ -27,17 +29,17 @@ export function Header() {
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
 
-  const openMega = () => {
+  const openMega = (which: 'products' | 'services') => {
     if (hoverTimer.current) clearTimeout(hoverTimer.current)
-    setMegaOpen(true)
+    setActiveMega(which)
   }
   const closeMega = () => {
-    hoverTimer.current = setTimeout(() => setMegaOpen(false), 150)
+    hoverTimer.current = setTimeout(() => setActiveMega(null), 150)
   }
 
   const navItems = [
-    { label: 'Каталог изделий', action: 'mega', to: '/catalog' },
-    { label: 'Каталог услуг', to: '/services' },
+    { label: 'Каталог изделий', action: 'mega', megaKey: 'products' as const, to: '/catalog' },
+    { label: 'Каталог услуг', action: 'mega', megaKey: 'services' as const, to: '/services' },
     { label: 'Работы', to: '/works' },
     { label: 'Производство', to: '/production' },
     { label: 'О компании', to: '/about' },
@@ -46,7 +48,7 @@ export function Header() {
 
   return (
     <>
-      <header className={`site-header ${scrolled ? 'scrolled' : ''} ${megaOpen ? 'mega-open' : ''}`}>
+      <header className={`site-header ${scrolled ? 'scrolled' : ''} ${activeMega ? 'mega-open' : ''}`}>
         <div className="container header-inner">
           <Link to="/" className="header-logo" aria-label="METLIGHT">
             METLIGHT
@@ -58,13 +60,13 @@ export function Header() {
                 <div
                   key={item.label}
                   className="header-nav-item header-nav-mega"
-                  onMouseEnter={openMega}
+                  onMouseEnter={() => openMega(item.megaKey!)}
                   onMouseLeave={closeMega}
                 >
                   <Link
                     to={item.to!}
-                    className="header-nav-link"
-                    aria-expanded={megaOpen}
+                    className={`header-nav-link ${activeMega === item.megaKey ? 'active' : ''}`}
+                    aria-expanded={activeMega === item.megaKey}
                   >
                     {item.label}
                     <ChevronDown size={14} className="header-nav-chevron" />
@@ -100,7 +102,22 @@ export function Header() {
           </div>
         </div>
 
-        <MegaMenu open={megaOpen} onClose={closeMega} onEnter={openMega} />
+        <MegaMenu
+          open={activeMega === 'products'}
+          onClose={closeMega}
+          onEnter={() => openMega('products')}
+          items={categories}
+          basePath="/catalog"
+          allLinkText="→ Смотреть весь каталог изделий"
+        />
+        <MegaMenu
+          open={activeMega === 'services'}
+          onClose={closeMega}
+          onEnter={() => openMega('services')}
+          items={serviceCategories}
+          basePath="/services"
+          allLinkText="→ Смотреть весь каталог услуг"
+        />
       </header>
 
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
