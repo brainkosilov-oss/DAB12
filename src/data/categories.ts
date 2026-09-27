@@ -10,6 +10,7 @@ export const categories: Category[] = [
   {
     id: '1',
     name: 'Навесы',
+    nameGenitive: 'навесов',
     shortName: 'Навесы',
     slug: 'navesy',
     description:
@@ -31,6 +32,7 @@ export const categories: Category[] = [
   {
     id: '2',
     name: 'Ворота и калитки',
+    nameGenitive: 'ворот и калиток',
     shortName: 'Ворота',
     slug: 'vorota',
     description:
@@ -51,6 +53,7 @@ export const categories: Category[] = [
   {
     id: '3',
     name: 'Заборы и ограждения',
+    nameGenitive: 'заборов и ограждений',
     shortName: 'Заборы',
     slug: 'zabory',
     description:
@@ -71,6 +74,7 @@ export const categories: Category[] = [
   {
     id: '4',
     name: 'Металлические лестницы',
+    nameGenitive: 'металлических лестниц',
     shortName: 'Лестницы',
     slug: 'lestnicy',
     description:
@@ -91,6 +95,7 @@ export const categories: Category[] = [
   {
     id: '5',
     name: 'Перила и ограждения',
+    nameGenitive: 'перил и ограждений',
     shortName: 'Перила',
     slug: 'perila',
     description:
@@ -111,6 +116,7 @@ export const categories: Category[] = [
   {
     id: '6',
     name: 'Козырьки',
+    nameGenitive: 'козырьков',
     shortName: 'Козырьки',
     slug: 'kozyrki',
     description:
@@ -131,6 +137,7 @@ export const categories: Category[] = [
   {
     id: '7',
     name: 'Гаражи и хозпостройки',
+    nameGenitive: 'гаражей и хозпостроек',
     shortName: 'Гаражи',
     slug: 'garazhi',
     description:
@@ -151,6 +158,7 @@ export const categories: Category[] = [
   {
     id: '8',
     name: 'Террасы и веранды',
+    nameGenitive: 'террас и веранд',
     shortName: 'Террасы',
     slug: 'terrasy',
     description:
@@ -171,6 +179,7 @@ export const categories: Category[] = [
   {
     id: '9',
     name: 'Беседки и павильоны',
+    nameGenitive: 'беседок и павильонов',
     shortName: 'Беседки',
     slug: 'besedki',
     description:
@@ -191,6 +200,7 @@ export const categories: Category[] = [
   {
     id: '10',
     name: 'Металлокаркасы',
+    nameGenitive: 'металлокаркасов',
     shortName: 'Металлокаркасы',
     slug: 'metallokarkasy',
     description:

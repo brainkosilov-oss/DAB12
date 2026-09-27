@@ -1,6 +1,7 @@
 export interface Category {
   id: string
   name: string
+  nameGenitive: string
   shortName: string
   slug: string
   description: string

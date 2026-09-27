@@ -91,7 +91,7 @@ export function Category() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <SectionHeader label="ВИДЫ" title={`Виды ${category.name.toLowerCase()}`} />
+            <SectionHeader label="ВИДЫ" title={`Виды ${category.nameGenitive}`} />
           </Reveal>
           <div className="cat-products">
             {category.productTypes.map((pt, i) => (
