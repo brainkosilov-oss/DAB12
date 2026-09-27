@@ -74,6 +74,6 @@ export const companyInfo = {
   whatsappRaw: '79126438967',
   max: '+7 912 643-89-67',
   address: 'Верхняя Пышма, ул. Пролетарская, 1',
-  location: 'Верхняя Пышма / Екатеринбург',
+  location: 'Екатеринбург',
   coverage: 'Все регионы России',
 }

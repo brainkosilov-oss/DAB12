@@ -21,15 +21,13 @@ export function Home() {
           <Reveal>
             <span className="label label-accent hero-label">
               ПРОИЗВОДСТВО МЕТАЛЛОКОНСТРУКЦИЙ
-              <br />
-              {companyInfo.location.toUpperCase()}
             </span>
           </Reveal>
           <Reveal delay={100}>
             <h1 className="h1 hero-title">
-              МЕТАЛЛ,<br />
-              КОТОРЫЙ<br />
-              РАБОТАЕТ.
+              СТРОИТЕЛЬСТВО<br />
+              ЧАСТНЫХ<br />
+              ОБЪЕКТОВ.
             </h1>
           </Reveal>
           <Reveal delay={200}>
