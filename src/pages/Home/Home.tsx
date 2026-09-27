@@ -304,29 +304,116 @@ export function Home() {
             </Link>
           </Reveal>
           <div className="home-works">
-            {[0, 1, 2, 3, 4, 5].map((i) => (
-              <Reveal key={i} delay={i * 80}>
-                <div className={`home-work home-work-${i}`}>
-                  <Placeholder label={`РАБОТА ${String(i + 1).padStart(2, '0')}`} aspect={i % 3 === 0 ? '4/5' : '4/3'} />
-                </div>
+            {[
+              { title: 'ЧАСТНЫЙ ДОМ №1', area: '180 м²', location: 'Екатеринбург', desc: 'Каркасный дом из металлоконструкций с навесом для авто и террасой. Полный цикл — от проекта до монтажа.' },
+              { title: 'ЧАСТНЫЙ ДОМ №2', area: '240 м²', location: 'Екатеринбург', desc: 'Двухэтажный дом с металлическим каркасом, панорамными окнами и плоской кровлей. Сдача под ключ.' },
+              { title: 'ЧАСТНЫЙ ДОМ №3', area: '150 м²', location: 'Екатеринбург', desc: 'Загородный дом с верандой и навесом. Металлический каркас, облицовка профнастилом и сэндвич-панелями.' },
+              { title: 'ЧАСТНЫЙ ДОМ №4', area: '320 м²', location: 'Екатеринбург', desc: 'Большой семейный дом с гаражом, террасой и балконом. Металлокаркас, утепление, монтаж за 3 месяца.' },
+            ].map((w, i) => (
+              <Reveal key={i} delay={i * 100}>
+                <article className="home-work-card">
+                  <div className="home-work-image">
+                    <Placeholder label={w.title} aspect="16/9" />
+                  </div>
+                  <div className="home-work-body">
+                    <div className="home-work-meta">
+                      <span className="home-work-area">{w.area}</span>
+                      <span className="home-work-loc">{w.location}</span>
+                    </div>
+                    <h3 className="h4 home-work-title">{w.title}</h3>
+                    <p className="body home-work-desc">{w.desc}</p>
+                  </div>
+                </article>
               </Reveal>
             ))}
           </div>
         </div>
         <style>{`
           .home-works {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-auto-rows: auto;
-            gap: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
             margin-top: 48px;
           }
-          .home-work-0 { grid-column: span 2; grid-row: span 2; }
-          .home-work-3 { grid-column: span 2; }
-          .home-work img, .home-work .placeholder { transition: transform var(--t-med); }
-          .home-work:hover .placeholder { transform: scale(1.02); }
-          @media (max-width: 1024px) { .home-works { grid-template-columns: repeat(2, 1fr); } .home-work-0 { grid-column: span 2; grid-row: span 1; } }
-          @media (max-width: 640px) { .home-works { grid-template-columns: 1fr; } .home-work-0, .home-work-3 { grid-column: span 1; } }
+          .home-work-card {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid var(--c-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: border-color var(--t-fast), box-shadow var(--t-fast);
+            max-height: 380px;
+          }
+          .home-work-card:hover {
+            border-color: var(--c-text);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+          }
+          .home-work-image {
+            flex: 0 0 55%;
+            max-width: 55%;
+            overflow: hidden;
+            position: relative;
+          }
+          .home-work-image .placeholder {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: auto;
+            border-radius: 0;
+            transition: transform var(--t-med);
+          }
+          .home-work-card:hover .home-work-image .placeholder {
+            transform: scale(1.03);
+          }
+          .home-work-body {
+            flex: 1;
+            padding: 32px 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            overflow-y: auto;
+            justify-content: center;
+          }
+          .home-work-meta {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+          }
+          .home-work-area {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--c-accent);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+          }
+          .home-work-loc {
+            font-size: 13px;
+            color: var(--c-text-secondary);
+            letter-spacing: 0.04em;
+          }
+          .home-work-title {
+            color: var(--c-text);
+          }
+          .home-work-desc {
+            color: var(--c-text-secondary);
+            line-height: 1.6;
+          }
+          @media (max-width: 768px) {
+            .home-work-card {
+              flex-direction: column;
+              max-height: none;
+            }
+            .home-work-image {
+              flex: none;
+              max-width: 100%;
+              width: 100%;
+            }
+            .home-work-image .placeholder {
+              aspect-ratio: 16/9;
+            }
+            .home-work-body {
+              overflow-y: visible;
+            }
+          }
         `}</style>
       </section>
 
