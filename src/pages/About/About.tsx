@@ -22,7 +22,7 @@ export function About() {
           </Reveal>
           <Reveal delay={200}>
             <p className="body-lg about-hero-text">
-              METLIGHT — производитель металлоконструкций в Верхней Пышме / Екатеринбурге.
+              Строительные решения — производитель металлоконструкций в Верхней Пышме / Екатеринбурге.
               Изготавливаем конструкции под ваши размеры на собственном производстве.
             </p>
           </Reveal>
@@ -75,7 +75,7 @@ export function About() {
             </Reveal>
             <Reveal delay={100}>
               <div className="about-image">
-                <Placeholder label="METLIGHT" aspect="4/3" />
+                <Placeholder label="СТРОИТЕЛЬНЫЕ РЕШЕНИЯ" aspect="4/3" />
               </div>
             </Reveal>
           </div>

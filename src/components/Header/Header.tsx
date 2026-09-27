@@ -50,8 +50,9 @@ export function Header() {
     <>
       <header className={`site-header ${scrolled ? 'scrolled' : ''} ${activeMega ? 'mega-open' : ''}`}>
         <div className="container header-inner">
-          <Link to="/" className="header-logo" aria-label="METLIGHT">
-            METLIGHT
+          <Link to="/" className="header-logo" aria-label="Строительные решения">
+            <span className="header-logo-line">Строительные</span>
+            <span className="header-logo-line">решения</span>
           </Link>
 
           <nav className="header-nav" aria-label="Главная навигация">
@@ -150,11 +151,19 @@ export function Header() {
           gap: 24px;
         }
         .header-logo {
-          font-size: 22px;
+          display: flex;
+          flex-direction: column;
+          line-height: 1;
+          flex-shrink: 0;
+        }
+        .header-logo-line {
+          font-size: 18px;
           font-weight: 800;
           letter-spacing: -0.02em;
           color: var(--c-text-dark);
-          flex-shrink: 0;
+        }
+        .header-logo-line:last-child {
+          color: var(--c-accent);
         }
         .header-nav {
           display: flex;

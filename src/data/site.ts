@@ -64,8 +64,8 @@ export const stats = [
 ]
 
 export const companyInfo = {
-  name: 'METLIGHT',
-  nameRu: 'МЕТЛАЙТ',
+  name: 'Строительные решения',
+  nameRu: 'Строительные решения',
   phone: '+7 912 643-89-67',
   phoneRaw: '+79126438967',
   email: 'termie@bk.ru',

@@ -27,7 +27,7 @@ export default async function handler(req, res) {
     }
 
     const message = `
-🔔 НОВАЯ ЗАЯВКА METLIGHT
+🔔 НОВАЯ ЗАЯВКА «Строительные решения»
 
 👤 Имя: ${name}
 📞 Телефон: ${phone}

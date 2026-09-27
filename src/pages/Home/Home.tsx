@@ -123,15 +123,15 @@ export function Home() {
           <div className="marquee-track">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="marquee-group">
-                <span>METAL CONSTRUCTIONS</span>
+                <span>МЕТАЛЛОКОНСТРУКЦИИ</span>
                 <span className="marquee-dot" />
-                <span>CUSTOM PRODUCTION</span>
+                <span>ПОД ЗАКАЗ</span>
                 <span className="marquee-dot" />
-                <span>DELIVERY</span>
+                <span>ДОСТАВКА</span>
                 <span className="marquee-dot" />
-                <span>INSTALLATION</span>
+                <span>МОНТАЖ</span>
                 <span className="marquee-dot" />
-                <span className="marquee-accent">METLIGHT</span>
+                <span className="marquee-accent">СТРОИТЕЛЬНЫЕ РЕШЕНИЯ</span>
                 <span className="marquee-dot" />
               </div>
             ))}
@@ -336,7 +336,7 @@ export function Home() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <SectionHeader label="ПРЕИМУЩЕСТВА" title="ПОЧЕМУ METLIGHT" />
+            <SectionHeader label="ПРЕИМУЩЕСТВА" title="ПОЧЕМУ СТРОИТЕЛЬНЫЕ РЕШЕНИЯ" />
           </Reveal>
           <div className="home-benefits">
             {benefits.map((b, i) => (

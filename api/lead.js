@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     }
 
     const message = `
-🔔 НОВАЯ ЗАЯВКА METLIGHT
+🔔 НОВАЯ ЗАЯВКА «Строительные решения»
 
 👤 Имя: ${name}
 📞 Телефон: ${phone}
@@ -89,7 +89,7 @@ ${comment || 'Не указан'}
     await transporter.sendMail({
       from: mailUser,
       to: mailTo,
-      subject: 'Новая заявка METLIGHT',
+      subject: 'Новая заявка «Строительные решения»',
       text: message
     })
 

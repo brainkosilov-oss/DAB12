@@ -20,7 +20,10 @@ export function Footer() {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <Link to="/" className="footer-logo">METLIGHT</Link>
+            <Link to="/" className="footer-logo">
+              <span className="footer-logo-line">Строительные</span>
+              <span className="footer-logo-line">решения</span>
+            </Link>
             <p className="footer-tagline body-sm">Производство металлоконструкций</p>
             <p className="footer-loc body-sm">{companyInfo.location}</p>
           </div>
@@ -81,7 +84,7 @@ export function Footer() {
             <Link to="/privacy">Политика конфиденциальности</Link>
             <Link to="/consent">Согласие на обработку персональных данных</Link>
           </div>
-          <span className="footer-copy body-sm">© {new Date().getFullYear()} METLIGHT</span>
+          <span className="footer-copy body-sm">© {new Date().getFullYear()} Строительные решения</span>
         </div>
       </div>
       <style>{`
@@ -98,10 +101,18 @@ export function Footer() {
           border-bottom: 1px solid var(--c-border-dark);
         }
         .footer-logo {
-          font-size: 28px;
+          display: flex;
+          flex-direction: column;
+          line-height: 1;
+        }
+        .footer-logo-line {
+          font-size: 24px;
           font-weight: 800;
           letter-spacing: -0.02em;
           color: var(--c-text-dark);
+        }
+        .footer-logo-line:last-child {
+          color: var(--c-accent);
         }
         .footer-tagline {
           color: var(--c-text-dark);

@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     }
 
     const message = `
-🔔 ТЕСТОВАЯ ЗАЯВКА METLIGHT
+🔔 ТЕСТОВАЯ ЗАЯВКА «Строительные решения»
 
 👤 Имя: Тестовый клиент
 📞 Телефон: +7 999 123-45-67

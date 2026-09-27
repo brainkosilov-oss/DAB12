@@ -13,7 +13,7 @@ app.use(express.json())
 app.get('/api/health', (req, res) => {
   res.json({
     success: true,
-    message: 'Сервер заявок METLIGHT работает'
+    message: 'Сервер заявок «Строительные решения» работает'
   })
 })
 
@@ -30,7 +30,7 @@ app.post('/api/test-telegram', async (req, res) => {
     }
 
     const message = `
-🔔 ТЕСТОВАЯ ЗАЯВКА METLIGHT
+🔔 ТЕСТОВАЯ ЗАЯВКА «Строительные решения»
 
 👤 Имя: Тестовый клиент
 📞 Телефон: +7 999 123-45-67

@@ -24,7 +24,10 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
       <div className={`mobile-menu-overlay ${open ? 'open' : ''}`} onClick={onClose} aria-hidden="true" />
       <div className={`mobile-menu ${open ? 'open' : ''}`} aria-hidden={!open}>
         <div className="mobile-menu-header">
-          <span className="mobile-menu-logo">METLIGHT</span>
+          <span className="mobile-menu-logo">
+            <span className="mobile-menu-logo-line">Строительные</span>
+            <span className="mobile-menu-logo-line">решения</span>
+          </span>
           <button onClick={onClose} aria-label="Закрыть меню" className="mobile-menu-close">
             <Close size={24} />
           </button>
@@ -113,8 +116,16 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           flex-shrink: 0;
         }
         .mobile-menu-logo {
-          font-size: 20px;
+          display: flex;
+          flex-direction: column;
+          line-height: 1;
+        }
+        .mobile-menu-logo-line {
+          font-size: 18px;
           font-weight: 800;
+        }
+        .mobile-menu-logo-line:last-child {
+          color: var(--c-accent);
         }
         .mobile-menu-close {
           color: var(--c-text-dark);
