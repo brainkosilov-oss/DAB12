@@ -23,6 +23,7 @@ export interface ProductType {
   coating: string
   priceLabel: string
   keywords: string[]
+  image?: string
 }
 
 export interface Work {

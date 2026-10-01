@@ -50,7 +50,11 @@ export function ProductModal({ product, categoryName, onClose }: ProductModalPro
         </button>
         <div className="modal-grid">
           <div className="modal-image">
-            <Placeholder label={product.name.toUpperCase()} aspect="4/5" />
+            {product.image ? (
+              <img src={product.image} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12 }} />
+            ) : (
+              <Placeholder label={product.name.toUpperCase()} aspect="4/5" />
+            )}
           </div>
           <div className="modal-info">
             <span className="label modal-cat">{categoryName}</span>
