@@ -91,7 +91,7 @@ export function ServiceCategory() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <SectionHeader label="ВИДЫ" title={`Виды работ — ${category.name.toLowerCase()}`} />
+            <SectionHeader label="ВИДЫ" title="Виды работ" />
           </Reveal>
           <div className="cat-products">
             {category.serviceTypes.map((st, i) => (
