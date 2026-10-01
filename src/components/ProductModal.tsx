@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import type { ProductType } from '../data/types'
-import { Placeholder } from './Placeholder'
 import { LeadForm } from './LeadForm/LeadForm'
 import { Close } from './Icons'
 
@@ -49,13 +48,6 @@ export function ProductModal({ product, categoryName, onClose }: ProductModalPro
           <Close size={24} />
         </button>
         <div className="modal-grid">
-          <div className="modal-image">
-            {product.image ? (
-              <img src={product.image} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12 }} />
-            ) : (
-              <Placeholder label={product.name.toUpperCase()} aspect="4/5" />
-            )}
-          </div>
           <div className="modal-info">
             <span className="label modal-cat">{categoryName}</span>
             <h2 className="h3 modal-title">{product.name}</h2>
@@ -135,14 +127,11 @@ export function ProductModal({ product, categoryName, onClose }: ProductModalPro
         }
         .modal-close:hover { background: var(--c-primary-dark); color: var(--c-text-dark); }
         .modal-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 0;
+          display: flex;
+          flex-direction: column;
         }
-        .modal-image { padding: 24px; }
-        .modal-image .placeholder { height: 100%; }
         .modal-info {
-          padding: 40px 32px 32px;
+          padding: 48px 48px 40px;
           display: flex;
           flex-direction: column;
           gap: 20px;
@@ -187,10 +176,7 @@ export function ProductModal({ product, categoryName, onClose }: ProductModalPro
         .modal-cta { margin-top: 8px; }
         @media (max-width: 768px) {
           .modal { max-height: 95vh; border-radius: 12px; }
-          .modal-grid { grid-template-columns: 1fr; }
-          .modal-image { padding: 16px 16px 0; }
-          .modal-image .placeholder { aspect-ratio: 16/10; height: auto; }
-          .modal-info { padding: 24px 16px 16px; }
+          .modal-info { padding: 28px 20px 20px; }
         }
       `}</style>
     </div>
