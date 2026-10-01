@@ -93,27 +93,6 @@ export const categories: Category[] = [
     ],
   },
   {
-    id: '5',
-    name: 'Перила и ограждения',
-    nameGenitive: 'перил и ограждений',
-    shortName: 'Перила',
-    slug: 'perila',
-    description:
-      'Изготавливаем перила и ограждения под ваши размеры — для лестниц, балконов, террас. Конструкция рассчитывается с учётом назначения и стиля.',
-    heroDescription: 'Перила и ограждения под ваши размеры — для лестниц, балконов, террас.',
-    keywords: ['перила', 'ограждение лестницы', 'перила для балкона', 'перила для террасы', 'балясины'],
-    productTypes: [
-      { id: '5-1', name: 'Перила для лестницы', slug: 'perila-dlya-lestnitsy', description: 'Перила и ограждения для внутренних и уличных лестниц.', characteristics: ['Каркас из профильной трубы', 'Заполнение по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['перила', 'лестница', 'ограждение'] },
-      { id: '5-2', name: 'Перила для балкона', slug: 'perila-dlya-balkona', description: 'Ограждения для балконов и лоджий.', characteristics: ['Каркас из профильной трубы', 'Заполнение по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['перила', 'балкон', 'ограждение'] },
-      { id: '5-3', name: 'Перила для террасы', slug: 'perila-dlya-terrasy', description: 'Ограждения для террас и открытых площадок.', characteristics: ['Каркас из профильной трубы', 'Заполнение по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['перила', 'терраса', 'ограждение'] },
-    ],
-    faq: [
-      { q: 'Можно ли изготовить перила по моему эскизу?', a: 'Да, мы изготавливаем перила по вашим эскизам и размерам.' },
-      { q: 'Какие стили доступны?', a: 'Стиль уточняется при расчёте — от минимализма до более декоративных решений.' },
-      { q: 'Выполняете ли монтаж перил?', a: 'Да, мы выполняем доставку и монтаж.' },
-    ],
-  },
-  {
     id: '6',
     name: 'Козырьки',
     nameGenitive: 'козырьков',
