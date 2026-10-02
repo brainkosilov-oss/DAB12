@@ -218,6 +218,27 @@ export const categories: Category[] = [
       { q: 'Выполняете ли монтаж?', a: 'Да, мы выполняем доставку и монтаж.' },
     ],
   },
+  {
+    id: '12',
+    name: 'Фасадные работы',
+    nameGenitive: 'фасадных работ',
+    shortName: 'Фасады',
+    slug: 'fasadnye-raboty',
+    description:
+      'Выполняем фасадные работы под ваши задачи — облицовку, утепление, штукатурку. Решение рассчитывается с учётом материала и состояния фасада.',
+    heroDescription: 'Фасадные работы под ваши задачи — облицовка, утепление, штукатурка.',
+    keywords: ['фасад', 'облицовка фасада', 'утепление фасада', 'штукатурка фасада', 'отделка фасада'],
+    productTypes: [
+      { id: '12-1', name: 'Облицовка фасада', slug: 'oblitsovka-fasada', description: 'Облицовка фасада по вашим размерам и материалу.', characteristics: ['Материал по выбору', 'Монтаж на подготовленную поверхность'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['облицовка', 'фасад', 'отделка'], image: 'https://i.postimg.cc/G22dnW67/images-(6).jpg' },
+      { id: '12-2', name: 'Утепление фасада', slug: 'uteplenie-fasada', description: 'Утепление фасада с учётом материала и климата.', characteristics: ['Теплоизоляция по выбору', 'Многослойная конструкция'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['утепление', 'фасад', 'теплоизоляция'], image: 'https://i.postimg.cc/FR8RWF1f/Lzq-Awzdn-4Memi-Nm3WF3sy-ONOl61Hmm2hp9zi-R05p-Sgah-BDZM.jpg' },
+      { id: '12-3', name: 'Штукатурка фасада', slug: 'shtukaturka-fasada', description: 'Штукатурная отделка фасада под ваши задачи.', characteristics: ['Декоративная или выравнивающая штукатурка', 'Под покраску'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['штукатурка', 'фасад', 'отделка'], image: 'https://i.postimg.cc/pLCdNJpR/im3fqw2iv8t8g1rhcp8rvhq40wf5sbow.jpg' },
+    ],
+    faq: [
+      { q: 'Можно ли выполнить работы по моему фасаду?', a: 'Да, мы выполняем фасадные работы под ваши размеры и материал.' },
+      { q: 'Какие материалы доступны?', a: 'Материалы уточняются при расчёте под ваш фасад.' },
+      { q: 'Выполняете ли монтаж?', a: 'Да, мы выполняем все фасадные работы под ключ.' },
+    ],
+  },
 ]
 
 export function getCategoryBySlug(slug: string): Category | undefined {
