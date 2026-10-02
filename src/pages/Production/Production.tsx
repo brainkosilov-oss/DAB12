@@ -13,21 +13,32 @@ export function Production() {
 
       <section className="prod-hero dark">
         <div className="container">
-          <Reveal>
-            <span className="label label-accent">ПРОИЗВОДСТВО</span>
-          </Reveal>
-          <Reveal delay={100}>
-            <h1 className="h1 prod-hero-title">СВОЁ ПРОИЗВОДСТВО.<br />ПОЛНЫЙ КОНТРОЛЬ.</h1>
-          </Reveal>
-          <Reveal delay={200}>
-            <div className="prod-hero-metric">
-              <span className="prod-metric-value">300 м²</span>
-              <span className="prod-metric-label">собственное производство</span>
+          <div className="prod-hero-grid">
+            <div className="prod-hero-left">
+              <Reveal>
+                <span className="label label-accent">ПРОИЗВОДСТВО</span>
+              </Reveal>
+              <Reveal delay={100}>
+                <h1 className="h1 prod-hero-title">СВОЁ ПРОИЗВОДСТВО.<br />ПОЛНЫЙ КОНТРОЛЬ.</h1>
+              </Reveal>
+              <Reveal delay={200}>
+                <div className="prod-hero-metric">
+                  <span className="prod-metric-value">300 м²</span>
+                  <span className="prod-metric-label">собственное производство</span>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+            <Reveal delay={150}>
+              <div className="prod-hero-right">
+                <img src="https://i.postimg.cc/V6tH34Db/Konstruktiv-proekt-1.jpg" alt="Собственное производство металлоконструкций" className="prod-hero-photo" />
+              </div>
+            </Reveal>
+          </div>
         </div>
         <style>{`
           .prod-hero { padding: 48px 0 64px; }
+          .prod-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+          .prod-hero-left { display: flex; flex-direction: column; }
           .prod-hero-title { margin-top: 16px; color: var(--c-text-dark); }
           .prod-hero-metric {
             display: flex; flex-direction: column; gap: 4px;
@@ -38,6 +49,9 @@ export function Production() {
           }
           .prod-metric-value { font-size: clamp(48px, 6vw, 72px); font-weight: 800; letter-spacing: -0.03em; color: var(--c-accent); line-height: 1; }
           .prod-metric-label { font-size: 14px; color: var(--c-text-dark-secondary); }
+          .prod-hero-right { width: 100%; }
+          .prod-hero-photo { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; aspect-ratio: 4/3; }
+          @media (max-width: 768px) { .prod-hero-grid { grid-template-columns: 1fr; gap: 32px; } }
         `}</style>
       </section>
 
