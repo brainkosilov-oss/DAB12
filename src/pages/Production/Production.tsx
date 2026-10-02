@@ -1,7 +1,6 @@
 import { Reveal } from '../../components/Reveal'
 import { SectionHeader } from '../../components/SectionHeader'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
-import { Placeholder } from '../../components/Placeholder'
 import { LeadForm } from '../../components/LeadForm/LeadForm'
 import { processSteps } from '../../data/site'
 
@@ -63,7 +62,7 @@ export function Production() {
             </Reveal>
             <Reveal delay={100}>
               <div className="prod-image">
-                <Placeholder label="ПРОИЗВОДСТВО" aspect="4/3" />
+                <img src="https://i.postimg.cc/T36Zj82T/551bf6c0d919df31a29c5ab21af3772f.jpg" alt="Производство металлоконструкций" className="prod-photo" />
               </div>
             </Reveal>
           </div>
@@ -74,6 +73,7 @@ export function Production() {
           .prod-text .label { color: var(--c-text-secondary); }
           .prod-text .body-lg { color: var(--c-text); }
           @media (max-width: 768px) { .prod-content { grid-template-columns: 1fr; gap: 32px; } }
+          .prod-photo { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; aspect-ratio: 4/3; }
         `}</style>
       </section>
 
