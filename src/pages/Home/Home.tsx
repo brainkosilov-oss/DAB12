@@ -55,6 +55,7 @@ export function Home() {
           .hero {
             position: relative;
             min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             align-items: flex-end;
             padding: 0 0 64px;
@@ -93,7 +94,7 @@ export function Home() {
           .hero-stat-value { font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; letter-spacing: -0.02em; }
           .hero-stat-label { font-size: 13px; color: var(--c-text-dark-secondary); }
           @media (max-width: 640px) {
-            .hero { min-height: 90vh; }
+            .hero { min-height: 90vh; min-height: 90dvh; }
             .hero-stats { grid-template-columns: 1fr 1fr; gap: 24px; }
           }
         `}</style>

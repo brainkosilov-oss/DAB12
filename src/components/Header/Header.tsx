@@ -154,11 +154,18 @@ export function Header() {
           flex-direction: column;
           line-height: 1;
           flex-shrink: 0;
+          padding: 8px 14px;
+          border: 1.5px solid rgba(239, 235, 228, 0.35);
+          border-radius: var(--r-sm);
+          transition: border-color var(--t-fast);
+        }
+        .header-logo:hover {
+          border-color: rgba(239, 235, 228, 0.7);
         }
         .header-logo-line {
-          font-size: 18px;
+          font-size: 17px;
           font-weight: 800;
-          letter-spacing: -0.02em;
+          letter-spacing: -0.01em;
           color: var(--c-text-dark);
         }
         .header-logo-line:last-child {

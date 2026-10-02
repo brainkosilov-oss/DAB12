@@ -107,6 +107,7 @@ export function ProductModal({ product, categoryName, onClose }: ProductModalPro
           max-width: 1000px;
           width: 100%;
           max-height: 92vh;
+          max-height: 92dvh;
           overflow-y: auto;
           animation: scaleIn var(--t-med) forwards;
         }
@@ -175,7 +176,7 @@ export function ProductModal({ product, categoryName, onClose }: ProductModalPro
         .modal-price-label { font-size: 16px; font-weight: 700; color: var(--c-text); }
         .modal-cta { margin-top: 8px; }
         @media (max-width: 768px) {
-          .modal { max-height: 95vh; border-radius: 12px; }
+          .modal { max-height: 95vh; max-height: 95dvh; border-radius: 12px; }
           .modal-info { padding: 28px 20px 20px; }
         }
       `}</style>

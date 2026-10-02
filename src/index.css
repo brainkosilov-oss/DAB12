@@ -59,6 +59,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -70,11 +72,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  touch-action: manipulation;
 }
 
 button {
@@ -82,13 +87,14 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  touch-action: manipulation;
 }
 
 input,
 textarea,
 select {
   font-family: inherit;
-  font-size: inherit;
+  font-size: 16px;
 }
 
 img {
@@ -373,3 +379,8 @@ ul {
 ::-webkit-scrollbar-track { background: var(--c-light-bg); }
 ::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--c-text-secondary); }
+
+/* Android mobile bottom bar spacing */
+@media (max-width: 1024px) {
+  body { padding-bottom: 72px; }
+}

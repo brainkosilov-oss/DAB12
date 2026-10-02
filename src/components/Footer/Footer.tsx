@@ -89,11 +89,18 @@ export function Footer() {
           display: flex;
           flex-direction: column;
           line-height: 1;
+          padding: 12px 18px;
+          border: 1.5px solid rgba(239, 235, 228, 0.25);
+          border-radius: var(--r-sm);
+          transition: border-color var(--t-fast);
+        }
+        .footer-logo:hover {
+          border-color: rgba(239, 235, 228, 0.55);
         }
         .footer-logo-line {
-          font-size: 24px;
+          font-size: 22px;
           font-weight: 800;
-          letter-spacing: -0.02em;
+          letter-spacing: -0.01em;
           color: var(--c-text-dark);
         }
         .footer-logo-line:last-child {
