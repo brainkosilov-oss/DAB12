@@ -137,7 +137,7 @@ export function Header() {
         }
         .site-header.scrolled {
           height: var(--header-h-scrolled);
-          background: rgba(30, 58, 95, 0.88);
+          background: rgba(44, 44, 46, 0.90);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           border-bottom: 1px solid var(--c-border-dark);

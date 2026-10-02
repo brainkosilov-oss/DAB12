@@ -61,7 +61,7 @@ export function FloatingCTA() {
           transform: translateY(20px);
           pointer-events: none;
           transition: opacity var(--t-med), transform var(--t-med), background var(--t-fast);
-          box-shadow: 0 8px 32px rgba(232, 116, 60, 0.3);
+          box-shadow: 0 8px 32px rgba(184, 112, 74, 0.3);
         }
         .floating-btn.show {
           opacity: 1;
@@ -69,7 +69,7 @@ export function FloatingCTA() {
           pointer-events: auto;
         }
         .floating-btn:hover {
-          background: #f0824a;
+          background: #c97e54;
           transform: translateY(-2px);
         }
         @media (max-width: 1024px) {
@@ -85,7 +85,7 @@ export function FloatingCTA() {
           display: none;
           gap: 8px;
           padding: 8px 8px max(8px, env(safe-area-inset-bottom)) 8px;
-          background: rgba(30, 58, 95, 0.94);
+          background: rgba(44, 44, 46, 0.94);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           border-top: 1px solid var(--c-border-dark);

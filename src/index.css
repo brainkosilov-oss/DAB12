@@ -1,18 +1,18 @@
 :root {
-  /* Color system — light, warm, construction/industrial */
-  --c-primary-dark: #1E3A5F;
-  --c-dark-surface: #2B4D72;
-  --c-light-bg: #F7F6F3;
-  --c-white: #FFFFFF;
-  --c-text: #1A2332;
-  --c-text-secondary: #5A6573;
-  --c-border: #E0DDD7;
-  --c-accent: #E8743C;
+  /* Color system — "Concrete & Copper": warm industrial minimalism */
+  --c-primary-dark: #2C2C2E;
+  --c-dark-surface: #3A3A3D;
+  --c-light-bg: #EFEBE4;
+  --c-white: #FAF8F5;
+  --c-text: #2C2C2E;
+  --c-text-secondary: #6B6862;
+  --c-border: #D8D3CB;
+  --c-accent: #B8704A;
 
   /* Dark section text */
-  --c-text-dark: #F7F6F3;
-  --c-text-dark-secondary: #A5B0BF;
-  --c-border-dark: #3A5A7F;
+  --c-text-dark: #EFEBE4;
+  --c-text-dark-secondary: #A8A29A;
+  --c-border-dark: #4A4A4D;
 
   /* Spacing (8px system) */
   --sp-1: 8px;
@@ -42,12 +42,12 @@
   --t-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Radius */
-  --r-sm: 8px;
-  --r-md: 12px;
-  --r-lg: 16px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
 
   /* Font */
-  --font: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 * {
@@ -108,7 +108,7 @@ ul {
 
 ::selection {
   background: var(--c-accent);
-  color: var(--c-primary-dark);
+  color: var(--c-white);
 }
 
 /* Typography */
@@ -210,11 +210,11 @@ ul {
 
 .btn-primary {
   background: var(--c-accent);
-  color: var(--c-primary-dark);
+  color: var(--c-white);
 }
 
 .btn-primary:hover {
-  background: #f0824a;
+  background: #c97e54;
   transform: translateY(-1px);
 }
 

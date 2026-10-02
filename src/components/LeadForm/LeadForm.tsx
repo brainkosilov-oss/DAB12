@@ -293,7 +293,7 @@ export function LeadForm({ variant = 'dark', defaultProduct = '', compact = fals
         }
         .lead-upload.drag {
           border-color: var(--c-accent);
-          background: rgba(232, 116, 60, 0.08);
+          background: rgba(184, 112, 74, 0.08);
         }
         .lead-upload.error { border-color: #ff4444; }
         .lead-upload-placeholder {
