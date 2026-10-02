@@ -73,9 +73,9 @@ export const serviceCategories: ServiceCategory[] = [
     heroDescription: 'Монолитные работы — фундаменты, перекрытия, колонны, стены.',
     keywords: ['монолит', 'монолитные работы', 'фундамент', 'бетонирование', 'армирование'],
     serviceTypes: [
-      { id: '4-1', name: 'Фундамент', slug: 'fundament', description: 'Заливка ленточного, плитного или свайно-ростверкового фундамента.', characteristics: ['Лента, плита или сваи', 'Армирование по расчёту'], priceLabel: DEFAULT_PRICE, keywords: ['фундамент', 'монолит', 'бетон'] },
-      { id: '4-2', name: 'Перекрытия', slug: 'perekrytiya', description: 'Монолитные железобетонные перекрытия.', characteristics: ['Опалубка и армирование', 'Бетонирование с виброуплотнением'], priceLabel: DEFAULT_PRICE, keywords: ['перекрытие', 'монолит', 'бетон'] },
-      { id: '4-3', name: 'Колонны и стены', slug: 'kolonny-i-steny', description: 'Монолитные колонны и стены.', characteristics: ['Армирование и опалубка', 'Бетонирование с контролем'], priceLabel: DEFAULT_PRICE, keywords: ['колонны', 'стены', 'монолит'] },
+      { id: '4-1', name: 'Фундамент', slug: 'fundament', description: 'Заливка ленточного, плитного или свайно-ростверкового фундамента.', characteristics: ['Лента, плита или сваи', 'Армирование по расчёту'], priceLabel: DEFAULT_PRICE, keywords: ['фундамент', 'монолит', 'бетон'], image: 'https://i.postimg.cc/L8KP4D94/images-(7).jpg' },
+      { id: '4-2', name: 'Перекрытия', slug: 'perekrytiya', description: 'Монолитные железобетонные перекрытия.', characteristics: ['Опалубка и армирование', 'Бетонирование с виброуплотнением'], priceLabel: DEFAULT_PRICE, keywords: ['перекрытие', 'монолит', 'бетон'], image: 'https://i.postimg.cc/9QhBgCqs/monolitnaja-plita.jpg' },
+      { id: '4-3', name: 'Колонны и стены', slug: 'kolonny-i-steny', description: 'Монолитные колонны и стены.', characteristics: ['Армирование и опалубка', 'Бетонирование с контролем'], priceLabel: DEFAULT_PRICE, keywords: ['колонны', 'стены', 'монолит'], image: 'https://i.postimg.cc/MTv0fGhx/object-17-preview-min.jpg' },
     ],
     faq: [
       { q: 'Какой бетон используете?', a: 'Марка бетона подбирается под проект — уточняется при расчёте.' },
