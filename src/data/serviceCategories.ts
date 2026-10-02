@@ -53,9 +53,9 @@ export const serviceCategories: ServiceCategory[] = [
     heroDescription: 'Кровельные работы — монтаж, ремонт, утепление, водосточные системы.',
     keywords: ['кровля', 'кровельные работы', 'монтаж кровли', 'ремонт кровли', 'металлочерепица'],
     serviceTypes: [
-      { id: '3-1', name: 'Монтаж кровли', slug: 'montazh-krovli', description: 'Монтаж кровли из металлочерепицы, профнастила или мягкой кровли.', characteristics: ['Металлочерепица, профнастил или мягкая', 'Обрешётка и гидроизоляция'], priceLabel: DEFAULT_PRICE, keywords: ['монтаж', 'кровля', 'металлочерепица'] },
-      { id: '3-2', name: 'Ремонт кровли', slug: 'remont-krovli', description: 'Ремонт и восстановление кровельного покрытия.', characteristics: ['Дефектовка и замена участков', 'Герметизация стыков'], priceLabel: DEFAULT_PRICE, keywords: ['ремонт', 'кровля', 'восстановление'] },
-      { id: '3-3', name: 'Водосточные системы', slug: 'vodostochnye-sistemy', description: 'Монтаж водосточной системы.', characteristics: ['Металлические или пластиковые', 'Расчёт сечения и уклона'], priceLabel: DEFAULT_PRICE, keywords: ['водосток', 'кровля', 'монтаж'] },
+      { id: '3-1', name: 'Монтаж кровли', slug: 'montazh-krovli', description: 'Монтаж кровли из металлочерепицы, профнастила или мягкой кровли.', characteristics: ['Металлочерепица, профнастил или мягкая', 'Обрешётка и гидроизоляция'], priceLabel: DEFAULT_PRICE, keywords: ['монтаж', 'кровля', 'металлочерепица'], image: 'https://i.postimg.cc/CLVMzQqc/profnastil-krovel.jpg' },
+      { id: '3-2', name: 'Ремонт кровли', slug: 'remont-krovli', description: 'Ремонт и восстановление кровельного покрытия.', characteristics: ['Дефектовка и замена участков', 'Герметизация стыков'], priceLabel: DEFAULT_PRICE, keywords: ['ремонт', 'кровля', 'восстановление'], image: 'https://i.postimg.cc/zDxpf963/kogda-nuzhen-remont-krovli-priznaki-hero.jpg' },
+      { id: '3-3', name: 'Водосточные системы', slug: 'vodostochnye-sistemy', description: 'Монтаж водосточной системы.', characteristics: ['Металлические или пластиковые', 'Расчёт сечения и уклона'], priceLabel: DEFAULT_PRICE, keywords: ['водосток', 'кровля', 'монтаж'], image: 'https://i.postimg.cc/KY7DhVtT/909e56a45426594a4ae34d37cc4848c6.jpg' },
     ],
     faq: [
       { q: 'С какими кровельными материалами вы работаете?', a: 'Металлочерепица, профнастил, мягкая и фальцевая кровля.' },
