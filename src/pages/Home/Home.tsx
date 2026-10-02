@@ -452,7 +452,7 @@ export function Home() {
           <Reveal>
             <SectionHeader
               label="ДЛЯ КОГО"
-              title="ДЛЯ ДОМА. ДЛЯ БИЗНЕСА. ДЛЯ СТРОИТЕЛЬСТВА."
+              title="Для дома и бизнеса"
             />
           </Reveal>
           <div className="home-audience">
