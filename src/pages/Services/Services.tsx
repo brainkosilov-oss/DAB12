@@ -78,7 +78,11 @@ function ServiceCard({ category }: { category: ServiceCategory }) {
   return (
     <Link to={`/services/${category.slug}`} className="service-cat-card">
       <div className="service-cat-card-image">
-        <Placeholder label={category.shortName.toUpperCase()} aspect="16/9" />
+        {category.image ? (
+          <img src={category.image} alt={category.name} className="service-cat-card-img" />
+        ) : (
+          <Placeholder label={category.shortName.toUpperCase()} aspect="16/9" />
+        )}
       </div>
       <div className="service-cat-card-info">
         <span className="service-cat-card-num">{category.id}</span>
@@ -96,7 +100,9 @@ function ServiceCard({ category }: { category: ServiceCategory }) {
         }
         .service-cat-card:hover { transform: translateY(-4px); }
         .service-cat-card-image { overflow: hidden; border-radius: 12px; }
+        .service-cat-card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; transition: transform var(--t-med); }
         .service-cat-card-image .placeholder { transition: transform var(--t-med); }
+        .service-cat-card:hover .service-cat-card-img { transform: scale(1.04); }
         .service-cat-card:hover .service-cat-card-image .placeholder { transform: scale(1.04); }
         .service-cat-card-info { display: flex; flex-direction: column; gap: 8px; padding-top: 16px; }
         .service-cat-card-num { font-size: 13px; font-weight: 700; color: var(--c-accent); }

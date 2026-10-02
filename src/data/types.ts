@@ -53,6 +53,7 @@ export interface ServiceCategory {
   description: string
   heroDescription: string
   keywords: string[]
+  image?: string
   serviceTypes: ServiceType[]
   faq: { q: string; a: string }[]
 }
