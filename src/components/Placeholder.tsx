@@ -24,7 +24,7 @@ export function Placeholder({ label = 'ФОТО', aspect = '4/3', dark = false, 
       <style>{`
         .placeholder {
           width: 100%;
-          background: ${dark ? '#1a1e22' : '#e8e9e7'};
+          background: ${dark ? '#2B4D72' : '#EDEAE4'};
           border-radius: 12px;
           overflow: hidden;
           position: relative;
@@ -32,13 +32,13 @@ export function Placeholder({ label = 'ФОТО', aspect = '4/3', dark = false, 
           align-items: center;
           justify-content: center;
         }
-        .placeholder-dark { background: #1a1e22; }
+        .placeholder-dark { background: #2B4D72; }
         .placeholder-inner {
           display: flex;
           flex-direction: column;
           align-items: center;
           gap: 8px;
-          color: ${dark ? '#3a3e43' : '#b8bbbd'};
+          color: ${dark ? '#5A7A9A' : '#C4C0B8'};
         }
         .placeholder-inner span {
           font-size: 11px;

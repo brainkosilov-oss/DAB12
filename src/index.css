@@ -1,18 +1,18 @@
 :root {
-  /* Color system */
-  --c-primary-dark: #0B0D0F;
-  --c-dark-surface: #15191D;
-  --c-light-bg: #F3F4F2;
+  /* Color system — light, warm, construction/industrial */
+  --c-primary-dark: #1E3A5F;
+  --c-dark-surface: #2B4D72;
+  --c-light-bg: #F7F6F3;
   --c-white: #FFFFFF;
-  --c-text: #111315;
-  --c-text-secondary: #6D7277;
-  --c-border: #D9DCDE;
-  --c-accent: #C8FF00;
+  --c-text: #1A2332;
+  --c-text-secondary: #5A6573;
+  --c-border: #E0DDD7;
+  --c-accent: #E8743C;
 
   /* Dark section text */
-  --c-text-dark: #F3F4F2;
-  --c-text-dark-secondary: #8A8F94;
-  --c-border-dark: #2A2E33;
+  --c-text-dark: #F7F6F3;
+  --c-text-dark-secondary: #A5B0BF;
+  --c-border-dark: #3A5A7F;
 
   /* Spacing (8px system) */
   --sp-1: 8px;
@@ -214,7 +214,7 @@ ul {
 }
 
 .btn-primary:hover {
-  background: #d4ff33;
+  background: #f0824a;
   transform: translateY(-1px);
 }
 
