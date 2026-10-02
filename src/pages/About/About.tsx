@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Reveal } from '../../components/Reveal'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
-import { Placeholder } from '../../components/Placeholder'
 import { stats, benefits } from '../../data/site'
 import { ArrowUpRight } from '../../components/Icons'
 
@@ -75,7 +74,7 @@ export function About() {
             </Reveal>
             <Reveal delay={100}>
               <div className="about-image">
-                <Placeholder label="СТРОИТЕЛЬНЫЕ РЕШЕНИЯ" aspect="4/3" />
+                <img src="https://i.postimg.cc/XN8rwWkg/images-(9).jpg" alt="Строительные решения" style={{ width: '100%', borderRadius: '16px', aspectRatio: '4/3', objectFit: 'cover' }} />
               </div>
             </Reveal>
           </div>
