@@ -197,48 +197,6 @@ export const categories: Category[] = [
       { q: 'Выполняете ли монтаж?', a: 'Да, мы выполняем доставку и монтаж.' },
     ],
   },
-  {
-    id: '11',
-    name: 'Дома',
-    nameGenitive: 'домов',
-    shortName: 'Дома',
-    slug: 'doma',
-    description:
-      'Строим дома под ваши размеры — каркасные, блочные, кирпичные. Конструкция рассчитывается с учётом проекта и участка.',
-    heroDescription: 'Дома под ваши размеры — каркасные, из блоков, кирпичные.',
-    keywords: ['дом', 'каркасный дом', 'дом из блоков', 'кирпичный дом', 'строительство дома'],
-    productTypes: [
-      { id: '11-1', name: 'Каркасный дом', slug: 'karkasnyy-dom', description: 'Каркасный дом по вашим размерам и проекту.', characteristics: ['Каркасная конструкция', 'Заполнение по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['каркасный дом', 'каркас', 'дом'], image: 'https://i.postimg.cc/rFpWYshs/barkas-140-vid-sboku-neokrashennyj.jpg' },
-      { id: '11-2', name: 'Дом из блоков', slug: 'dom-iz-blokov', description: 'Дом из блочных материалов под ваши размеры.', characteristics: ['Блочная кладка', 'Кровля по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['дом из блоков', 'блоки', 'дом'], image: 'https://i.postimg.cc/3rt0p7KW/orepp-2.jpg' },
-      { id: '11-3', name: 'Кирпичный дом', slug: 'kirpichnyy-dom', description: 'Кирпичный дом по вашим размерам и проекту.', characteristics: ['Кирпичная кладка', 'Кровля по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['кирпичный дом', 'кирпич', 'дом'], image: 'https://i.postimg.cc/NFFMb9gh/odnoetazhnyj-kirpichnyj-dom-ufa.jpg' },
-    ],
-    faq: [
-      { q: 'Можно ли построить дом по моему проекту?', a: 'Да, мы строим дома по вашим проектам и размерам.' },
-      { q: 'Какие материалы доступны?', a: 'Каркасные, блочные и кирпичные конструкции — выбор зависит от ваших задач.' },
-      { q: 'Выполняете ли монтаж?', a: 'Да, мы выполняем доставку и монтаж.' },
-    ],
-  },
-  {
-    id: '12',
-    name: 'Фасадные работы',
-    nameGenitive: 'фасадных работ',
-    shortName: 'Фасады',
-    slug: 'fasadnye-raboty',
-    description:
-      'Выполняем фасадные работы под ваши задачи — облицовку, утепление, штукатурку. Решение рассчитывается с учётом материала и состояния фасада.',
-    heroDescription: 'Фасадные работы под ваши задачи — облицовка, утепление, штукатурка.',
-    keywords: ['фасад', 'облицовка фасада', 'утепление фасада', 'штукатурка фасада', 'отделка фасада'],
-    productTypes: [
-      { id: '12-1', name: 'Облицовка фасада', slug: 'oblitsovka-fasada', description: 'Облицовка фасада по вашим размерам и материалу.', characteristics: ['Материал по выбору', 'Монтаж на подготовленную поверхность'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['облицовка', 'фасад', 'отделка'], image: 'https://i.postimg.cc/G22dnW67/images-(6).jpg' },
-      { id: '12-2', name: 'Утепление фасада', slug: 'uteplenie-fasada', description: 'Утепление фасада с учётом материала и климата.', characteristics: ['Теплоизоляция по выбору', 'Многослойная конструкция'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['утепление', 'фасад', 'теплоизоляция'], image: 'https://i.postimg.cc/FR8RWF1f/Lzq-Awzdn-4Memi-Nm3WF3sy-ONOl61Hmm2hp9zi-R05p-Sgah-BDZM.jpg' },
-      { id: '12-3', name: 'Штукатурка фасада', slug: 'shtukaturka-fasada', description: 'Штукатурная отделка фасада под ваши задачи.', characteristics: ['Декоративная или выравнивающая штукатурка', 'Под покраску'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['штукатурка', 'фасад', 'отделка'], image: 'https://i.postimg.cc/pLCdNJpR/im3fqw2iv8t8g1rhcp8rvhq40wf5sbow.jpg' },
-    ],
-    faq: [
-      { q: 'Можно ли выполнить работы по моему фасаду?', a: 'Да, мы выполняем фасадные работы под ваши размеры и материал.' },
-      { q: 'Какие материалы доступны?', a: 'Материалы уточняются при расчёте под ваш фасад.' },
-      { q: 'Выполняете ли монтаж?', a: 'Да, мы выполняем все фасадные работы под ключ.' },
-    ],
-  },
 ]
 
 export function getCategoryBySlug(slug: string): Category | undefined {

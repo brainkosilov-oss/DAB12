@@ -65,4 +65,5 @@ export interface ServiceType {
   characteristics: string[]
   priceLabel: string
   keywords: string[]
+  image?: string
 }

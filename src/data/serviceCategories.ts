@@ -13,9 +13,9 @@ export const serviceCategories: ServiceCategory[] = [
     heroDescription: 'Строительство дома под ключ — от фундамента до отделки и заселения.',
     keywords: ['строительство дома', 'дом под ключ', 'строительство коттеджа', 'каркасный дом', 'дом из блоков'],
     serviceTypes: [
-      { id: '1-1', name: 'Каркасный дом', slug: 'karkasnyy-dom', description: 'Строительство каркасного дома по проекту.', characteristics: ['Каркасная технология', 'Утепление по выбору'], priceLabel: DEFAULT_PRICE, keywords: ['каркасный', 'дом', 'строительство'] },
-      { id: '1-2', name: 'Дом из блоков', slug: 'dom-iz-blokov', description: 'Строительство дома из газобетона или пеноблоков.', characteristics: ['Газобетон или пеноблок', 'Кладка и армирование'], priceLabel: DEFAULT_PRICE, keywords: ['блоки', 'газобетон', 'дом'] },
-      { id: '1-3', name: 'Кирпичный дом', slug: 'kirpichnyy-dom', description: 'Строительство дома из кирпича.', characteristics: ['Кирпичная кладка', 'Фундамент под нагрузку'], priceLabel: DEFAULT_PRICE, keywords: ['кирпич', 'дом', 'строительство'] },
+      { id: '1-1', name: 'Каркасный дом', slug: 'karkasnyy-dom', description: 'Строительство каркасного дома по проекту.', characteristics: ['Каркасная технология', 'Утепление по выбору'], priceLabel: DEFAULT_PRICE, keywords: ['каркасный', 'дом', 'строительство'], image: 'https://i.postimg.cc/rFpWYshs/barkas-140-vid-sboku-neokrashennyj.jpg' },
+      { id: '1-2', name: 'Дом из блоков', slug: 'dom-iz-blokov', description: 'Строительство дома из газобетона или пеноблоков.', characteristics: ['Газобетон или пеноблок', 'Кладка и армирование'], priceLabel: DEFAULT_PRICE, keywords: ['блоки', 'газобетон', 'дом'], image: 'https://i.postimg.cc/3rt0p7KW/orepp-2.jpg' },
+      { id: '1-3', name: 'Кирпичный дом', slug: 'kirpichnyy-dom', description: 'Строительство дома из кирпича.', characteristics: ['Кирпичная кладка', 'Фундамент под нагрузку'], priceLabel: DEFAULT_PRICE, keywords: ['кирпич', 'дом', 'строительство'], image: 'https://i.postimg.cc/NFFMb9gh/odnoetazhnyj-kirpichnyj-dom-ufa.jpg' },
     ],
     faq: [
       { q: 'Сколько времени занимает строительство?', a: 'Сроки зависят от проекта и материалов — уточняются при расчёте.' },
@@ -33,9 +33,9 @@ export const serviceCategories: ServiceCategory[] = [
     heroDescription: 'Фасадные работы — облицовка, утепление, штукатурка, навесные фасады.',
     keywords: ['фасад', 'фасадные работы', 'облицовка фасада', 'утепление фасада', 'штукатурка фасада'],
     serviceTypes: [
-      { id: '2-1', name: 'Облицовка фасада', slug: 'oblitsovka-fasada', description: 'Облицовка фасада клинкером, камнем или панелями.', characteristics: ['Клинкер, камень или панели', 'Подготовка поверхности'], priceLabel: DEFAULT_PRICE, keywords: ['облицовка', 'фасад', 'клинкер'] },
-      { id: '2-2', name: 'Утепление фасада', slug: 'uteplenie-fasada', description: 'Утепление фасада с устройством вентилируемой системы.', characteristics: ['Минвата или пенополистирол', 'Вентфасад или мокрый фасад'], priceLabel: DEFAULT_PRICE, keywords: ['утепление', 'фасад', 'вентфасад'] },
-      { id: '2-3', name: 'Штукатурка фасада', slug: 'shtukaturka-fasada', description: 'Декоративная штукатурка фасада.', characteristics: ['Декоративное покрытие', 'Армирование сеткой'], priceLabel: DEFAULT_PRICE, keywords: ['штукатурка', 'фасад', 'декоративное'] },
+      { id: '2-1', name: 'Облицовка фасада', slug: 'oblitsovka-fasada', description: 'Облицовка фасада клинкером, камнем или панелями.', characteristics: ['Клинкер, камень или панели', 'Подготовка поверхности'], priceLabel: DEFAULT_PRICE, keywords: ['облицовка', 'фасад', 'клинкер'], image: 'https://i.postimg.cc/G22dnW67/images-(6).jpg' },
+      { id: '2-2', name: 'Утепление фасада', slug: 'uteplenie-fasada', description: 'Утепление фасада с устройством вентилируемой системы.', characteristics: ['Минвата или пенополистирол', 'Вентфасад или мокрый фасад'], priceLabel: DEFAULT_PRICE, keywords: ['утепление', 'фасад', 'вентфасад'], image: 'https://i.postimg.cc/FR8RWF1f/Lzq-Awzdn-4Memi-Nm3WF3sy-ONOl61Hmm2hp9zi-R05p-Sgah-BDZM.jpg' },
+      { id: '2-3', name: 'Штукатурка фасада', slug: 'shtukaturka-fasada', description: 'Декоративная штукатурка фасада.', characteristics: ['Декоративное покрытие', 'Армирование сеткой'], priceLabel: DEFAULT_PRICE, keywords: ['штукатурка', 'фасад', 'декоративное'], image: 'https://i.postimg.cc/pLCdNJpR/im3fqw2iv8t8g1rhcp8rvhq40wf5sbow.jpg' },
     ],
     faq: [
       { q: 'Какие материалы вы используете?', a: 'Подбираем материалы под объект и бюджет — уточняем при расчёте.' },

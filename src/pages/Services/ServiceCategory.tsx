@@ -98,7 +98,11 @@ export function ServiceCategory() {
               <Reveal key={st.id} delay={i * 80}>
                 <button className="cat-product" onClick={() => setSelectedService(st)}>
                   <div className="cat-product-image">
-                    <Placeholder label={st.name.toUpperCase()} aspect="4/3" />
+                    {st.image ? (
+                      <img src={st.image} alt={st.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', aspectRatio: '4/3', transition: 'transform var(--t-med)' }} />
+                    ) : (
+                      <Placeholder label={st.name.toUpperCase()} aspect="4/3" />
+                    )}
                   </div>
                   <div className="cat-product-info">
                     <h3 className="h4 cat-product-title">{st.name}</h3>
@@ -122,8 +126,8 @@ export function ServiceCategory() {
           }
           .cat-product:hover { transform: translateY(-4px); }
           .cat-product-image { overflow: hidden; border-radius: 12px; }
-          .cat-product-image .placeholder { transition: transform var(--t-med); }
-          .cat-product:hover .cat-product-image .placeholder { transform: scale(1.04); }
+          .cat-product-image .placeholder, .cat-product-image img { transition: transform var(--t-med); }
+          .cat-product:hover .cat-product-image .placeholder, .cat-product:hover .cat-product-image img { transform: scale(1.04); }
           .cat-product-info { display: flex; flex-direction: column; gap: 8px; padding-top: 16px; }
           .cat-product-title { color: var(--c-text); }
           .cat-product-desc { color: var(--c-text-secondary); }
@@ -232,6 +236,7 @@ export function ServiceCategory() {
           coating: '',
           priceLabel: selectedService.priceLabel,
           keywords: selectedService.keywords,
+          image: selectedService.image,
         } : null}
         categoryName={category.name}
         onClose={() => setSelectedService(null)}
