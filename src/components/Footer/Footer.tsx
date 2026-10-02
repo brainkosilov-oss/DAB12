@@ -86,19 +86,20 @@ export function Footer() {
           border-bottom: 1px solid var(--c-border-dark);
         }
         .footer-logo {
-          display: flex;
+          display: inline-flex;
           flex-direction: column;
           line-height: 1;
-          padding: 12px 18px;
-          border: 1.5px solid rgba(239, 235, 228, 0.25);
+          padding: 8px 14px;
+          border: 1.5px solid rgba(239, 235, 228, 0.35);
           border-radius: var(--r-sm);
           transition: border-color var(--t-fast);
+          width: fit-content;
         }
         .footer-logo:hover {
-          border-color: rgba(239, 235, 228, 0.55);
+          border-color: rgba(239, 235, 228, 0.7);
         }
         .footer-logo-line {
-          font-size: 22px;
+          font-size: 17px;
           font-weight: 800;
           letter-spacing: -0.01em;
           color: var(--c-text-dark);

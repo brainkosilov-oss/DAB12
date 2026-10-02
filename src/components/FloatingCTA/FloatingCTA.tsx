@@ -18,16 +18,6 @@ export function FloatingCTA() {
 
   return (
     <>
-      {/* Desktop floating button */}
-      <Link
-        to="/#lead-form"
-        className={`floating-btn ${visible ? 'show' : ''}`}
-        aria-label="Рассчитать проект"
-      >
-        <span>РАССЧИТАТЬ ПРОЕКТ</span>
-        <ArrowUpRight size={18} />
-      </Link>
-
       {/* Mobile bottom action bar */}
       <div className={`mobile-bar ${visible ? 'show' : ''}`}>
         <a href={`tel:${companyInfo.phoneRaw}`} className="mobile-bar-call">
@@ -41,41 +31,6 @@ export function FloatingCTA() {
       </div>
 
       <style>{`
-        .floating-btn {
-          position: fixed;
-          bottom: 32px;
-          right: 32px;
-          z-index: 90;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          padding: 14px 24px;
-          background: var(--c-accent);
-          color: var(--c-primary-dark);
-          font-size: 13px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.04em;
-          border-radius: 10px;
-          opacity: 0;
-          transform: translateY(20px);
-          pointer-events: none;
-          transition: opacity var(--t-med), transform var(--t-med), background var(--t-fast);
-          box-shadow: 0 8px 32px rgba(184, 112, 74, 0.3);
-        }
-        .floating-btn.show {
-          opacity: 1;
-          transform: translateY(0);
-          pointer-events: auto;
-        }
-        .floating-btn:hover {
-          background: #c97e54;
-          transform: translateY(-2px);
-        }
-        @media (max-width: 1024px) {
-          .floating-btn { display: none; }
-        }
-
         .mobile-bar {
           position: fixed;
           bottom: 0;
