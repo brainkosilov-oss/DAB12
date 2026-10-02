@@ -5,6 +5,8 @@ import { Breadcrumbs } from '../../components/Breadcrumbs'
 import { Placeholder } from '../../components/Placeholder'
 import { FAQ } from '../../components/FAQ'
 import { LeadForm } from '../../components/LeadForm/LeadForm'
+import { JsonLd, buildFAQSchema, buildBreadcrumbSchema } from '../../components/JsonLd'
+import { useSEO } from '../../hooks/useSEO'
 import { getServiceCategoryBySlug } from '../../data/serviceCategories'
 import { processSteps } from '../../data/site'
 import { ArrowUpRight, ArrowRight } from '../../components/Icons'
@@ -16,6 +18,14 @@ export function ServiceCategory() {
   const { slug } = useParams<{ slug: string }>()
   const category = slug ? getServiceCategoryBySlug(slug) : undefined
   const [selectedService, setSelectedService] = useState<ServiceType | null>(null)
+
+  useSEO({
+    title: category ? `${category.name} — услуги под ключ | Строительные решения` : 'Услуги — Строительные решения',
+    description: category ? category.description : 'Каталог услуг.',
+    keywords: category?.keywords,
+    canonical: category ? `https://строительные-решения.рф/services/${category.slug}` : undefined,
+    ogImage: category?.image,
+  })
 
   if (!category) return <Navigate to="/services" replace />
 
@@ -227,6 +237,12 @@ export function ServiceCategory() {
         `}</style>
       </section>
 
+      <JsonLd data={buildFAQSchema(category.faq)} />
+      <JsonLd data={buildBreadcrumbSchema([
+        { name: 'Главная', path: '/' },
+        { name: 'Каталог услуг', path: '/services' },
+        { name: category.name, path: `/services/${category.slug}` },
+      ])} />
       <ProductModal
         product={selectedService ? {
           id: selectedService.id,

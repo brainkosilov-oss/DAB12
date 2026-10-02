@@ -3,10 +3,18 @@ import { Reveal } from '../../components/Reveal'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
 import { Placeholder } from '../../components/Placeholder'
 import { ArrowUpRight } from '../../components/Icons'
+import { useSEO } from '../../hooks/useSEO'
 import { serviceCategories } from '../../data/serviceCategories'
 import type { ServiceCategory } from '../../data/types'
 
 export function Services() {
+  useSEO({
+    title: 'Услуги — Строительство, фасадные, кровельные, монолитные работы | Строительные решения',
+    description: 'Полный цикл строительных работ: строительство домов под ключ, фасадные работы, кровельные работы, монолитные работы. Екатеринбург и все регионы России.',
+    keywords: ['строительные услуги', 'строительство дома', 'фасадные работы', 'кровельные работы', 'монолитные работы', 'Екатеринбург'],
+    canonical: 'https://строительные-решения.рф/services',
+  })
+
   return (
     <div className="services-catalog-page">
       <div className="container">

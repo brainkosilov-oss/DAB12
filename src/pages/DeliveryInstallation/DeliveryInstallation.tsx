@@ -2,8 +2,16 @@ import { Reveal } from '../../components/Reveal'
 import { SectionHeader } from '../../components/SectionHeader'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
 import { LeadForm } from '../../components/LeadForm/LeadForm'
+import { useSEO } from '../../hooks/useSEO'
 
 export function DeliveryInstallation() {
+  useSEO({
+    title: 'Доставка и монтаж металлоконструкций | Строительные решения',
+    description: 'Доставка и монтаж металлоконструкций. Работаем по всем регионам России. Сроки и стоимость уточняются при расчёте.',
+    keywords: ['доставка металлоконструкций', 'монтаж', 'установка', 'доставка по России'],
+    canonical: 'https://строительные-решения.рф/delivery-installation',
+  })
+
   return (
     <div className="delivery-page">
       <div className="container">

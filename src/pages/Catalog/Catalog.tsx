@@ -3,11 +3,19 @@ import { Link } from 'react-router-dom'
 import { Reveal } from '../../components/Reveal'
 import { CategoryCard } from '../../components/CategoryCard'
 import { Search, ArrowRight } from '../../components/Icons'
+import { useSEO } from '../../hooks/useSEO'
 import { searchCategories } from '../../data/categories'
 
 export function Catalog() {
   const [query, setQuery] = useState('')
   const results = useMemo(() => searchCategories(query), [query])
+
+  useSEO({
+    title: 'Каталог металлоконструкций — Навесы, ворота, заборы, лестницы | Строительные решения',
+    description: 'Каталог металлоконструкций: навесы, ворота и калитки, заборы и ограждения, лестницы, козырьки, гаражи, террасы, беседки, металлокаркасы. Изготовление под ваши размеры. Екатеринбург.',
+    keywords: ['каталог металлоконструкций', 'навесы', 'ворота', 'заборы', 'лестницы', 'козырьки', 'гаражи', 'террасы', 'беседки', 'металлокаркасы'],
+    canonical: 'https://строительные-решения.рф/catalog',
+  })
 
   return (
     <div className="catalog-page">

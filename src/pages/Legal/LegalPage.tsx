@@ -1,5 +1,6 @@
 import { Reveal } from '../../components/Reveal'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
+import { useSEO } from '../../hooks/useSEO'
 
 interface LegalPageProps {
   title: string
@@ -8,6 +9,12 @@ interface LegalPageProps {
 }
 
 export function LegalPage({ title, crumbs, paragraphs }: LegalPageProps) {
+  useSEO({
+    title: `${title} | Строительные решения`,
+    description: title,
+    canonical: crumbs.includes('Политика') ? 'https://строительные-решения.рф/privacy' : 'https://строительные-решения.рф/consent',
+  })
+
   return (
     <div className="legal-page">
       <div className="container">

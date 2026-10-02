@@ -1,10 +1,18 @@
 import { Link } from 'react-router-dom'
 import { Reveal } from '../../components/Reveal'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
+import { useSEO } from '../../hooks/useSEO'
 import { stats, benefits } from '../../data/site'
 import { ArrowUpRight } from '../../components/Icons'
 
 export function About() {
+  useSEO({
+    title: 'О компании — Строительные решения | Екатеринбург',
+    description: 'Строительные решения — две бригады строителей и сварщиков с собственным производством. Изготавливаем металлоконструкции и возводим частные постройки без посредников.',
+    keywords: ['о компании', 'строительные решения', 'бригада строителей', 'сварщики', 'Екатеринбург', 'Верхняя Пышма'],
+    canonical: 'https://строительные-решения.рф/about',
+  })
+
   return (
     <div className="about-page">
       <div className="container">

@@ -2,10 +2,18 @@ import { Reveal } from '../../components/Reveal'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
 import { Placeholder } from '../../components/Placeholder'
 import { LeadForm } from '../../components/LeadForm/LeadForm'
+import { useSEO } from '../../hooks/useSEO'
 import { companyInfo } from '../../data/site'
 import { Phone, Mail, MapPin, Send } from '../../components/Icons'
 
 export function Contacts() {
+  useSEO({
+    title: 'Контакты — Строительные решения | Екатеринбург',
+    description: 'Контакты: телефон, email, Telegram, WhatsApp. Верхняя Пышма, ул. Пролетарская, 1. Работаем по всем регионам России.',
+    keywords: ['контакты', 'телефон', 'email', 'Telegram', 'WhatsApp', 'Екатеринбург', 'Верхняя Пышма'],
+    canonical: 'https://строительные-решения.рф/contacts',
+  })
+
   const contacts = [
     { label: 'Телефон', value: companyInfo.phone, href: `tel:${companyInfo.phoneRaw}`, icon: Phone },
     { label: 'Email', value: companyInfo.email, href: `mailto:${companyInfo.email}`, icon: Mail },

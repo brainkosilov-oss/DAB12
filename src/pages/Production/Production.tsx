@@ -2,9 +2,17 @@ import { Reveal } from '../../components/Reveal'
 import { SectionHeader } from '../../components/SectionHeader'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
 import { LeadForm } from '../../components/LeadForm/LeadForm'
+import { useSEO } from '../../hooks/useSEO'
 import { processSteps } from '../../data/site'
 
 export function Production() {
+  useSEO({
+    title: 'Производство металлоконструкций — Собственное производство | Строительные решения',
+    description: 'Собственное производство металлоконструкций 300 м² в Верхней Пышме / Екатеринбурге. Изготавливаем без посредников по вашим размерам, эскизам и чертежам.',
+    keywords: ['производство металлоконструкций', 'собственное производство', 'Екатеринбург', 'Верхняя Пышма', 'изготовление металлоконструкций'],
+    canonical: 'https://строительные-решения.рф/production',
+  })
+
   return (
     <div className="production-page">
       <div className="container">

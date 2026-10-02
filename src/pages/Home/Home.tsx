@@ -5,11 +5,20 @@ import { Placeholder } from '../../components/Placeholder'
 import { LeadForm } from '../../components/LeadForm/LeadForm'
 import { CategoryCard } from '../../components/CategoryCard'
 import { FAQ } from '../../components/FAQ'
+import { JsonLd, buildLocalBusinessSchema, buildFAQSchema } from '../../components/JsonLd'
+import { useSEO } from '../../hooks/useSEO'
 import { categories } from '../../data/categories'
 import { stats, benefits, audienceBlocks, processSteps, faq, companyInfo } from '../../data/site'
 import { ArrowUpRight, ArrowRight, Phone } from '../../components/Icons'
 
 export function Home() {
+  useSEO({
+    title: 'Строительные решения — Производство металлоконструкций | Екатеринбург',
+    description: 'Собственное производство металлоконструкций в Верхней Пышме / Екатеринбурге. Навесы, ворота, заборы, лестницы, перила, беседки. Изготовление по вашим размерам. Доставка и монтаж по всем регионам России.',
+    keywords: ['металлоконструкции', 'навесы', 'ворота', 'заборы', 'лестницы', 'Екатеринбург', 'производство металлоконструкций'],
+    canonical: 'https://строительные-решения.рф/',
+  })
+
   return (
     <>
       {/* SECTION 01 — HERO */}
@@ -615,6 +624,8 @@ export function Home() {
           }
         `}</style>
       </section>
+      <JsonLd data={buildLocalBusinessSchema()} />
+      <JsonLd data={buildFAQSchema(faq)} />
     </>
   )
 }

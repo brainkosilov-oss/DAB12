@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Reveal } from '../../components/Reveal'
 import { Placeholder } from '../../components/Placeholder'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
+import { useSEO } from '../../hooks/useSEO'
 import { works } from '../../data/site'
 import { Close } from '../../components/Icons'
 
@@ -10,6 +11,13 @@ const tabs = ['Все', 'Навесы', 'Ворота', 'Заборы', 'Лес�
 export function Works() {
   const [activeTab, setActiveTab] = useState('Все')
   const [lightbox, setLightbox] = useState<number | null>(null)
+
+  useSEO({
+    title: 'Наши работы — Портфолио металлоконструкций | Строительные решения',
+    description: 'Портфолио выполненных проектов: навесы для авто, откатные и распашные ворота, заборы из профнастила, лестницы, террасы, беседки, гаражи. Екатеринбург.',
+    keywords: ['наши работы', 'портфолио', 'навесы', 'ворота', 'заборы', 'лестницы', 'террасы', 'беседки', 'гаражи'],
+    canonical: 'https://строительные-решения.рф/works',
+  })
 
   const filtered = activeTab === 'Все' ? works : works.filter((w) => w.tab === activeTab)
 

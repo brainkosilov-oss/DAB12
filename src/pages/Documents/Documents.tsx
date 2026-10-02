@@ -1,8 +1,15 @@
 import { Reveal } from '../../components/Reveal'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
 import { FileText, ArrowUpRight } from '../../components/Icons'
+import { useSEO } from '../../hooks/useSEO'
 
 export function Documents() {
+  useSEO({
+    title: 'Документы и сертификаты | Строительные решения',
+    description: 'Документы и сертификаты компании Строительные решения.',
+    canonical: 'https://строительные-решения.рф/documents',
+  })
+
   const docs = [
     { id: 'd1', title: 'Документ 01', desc: 'Уточняется при запросе' },
     { id: 'd2', title: 'Документ 02', desc: 'Уточняется при запросе' },

@@ -7,6 +7,8 @@ import { Placeholder } from '../../components/Placeholder'
 import { ProductModal } from '../../components/ProductModal'
 import { FAQ } from '../../components/FAQ'
 import { LeadForm } from '../../components/LeadForm/LeadForm'
+import { JsonLd, buildFAQSchema, buildBreadcrumbSchema } from '../../components/JsonLd'
+import { useSEO } from '../../hooks/useSEO'
 import { getCategoryBySlug } from '../../data/categories'
 import { processSteps } from '../../data/site'
 import { ArrowUpRight, ArrowRight } from '../../components/Icons'
@@ -16,6 +18,14 @@ export function Category() {
   const { slug } = useParams<{ slug: string }>()
   const category = slug ? getCategoryBySlug(slug) : undefined
   const [selectedProduct, setSelectedProduct] = useState<ProductType | null>(null)
+
+  useSEO({
+    title: category ? `${category.name} — изготовление под ваши размеры | Строительные решения` : 'Каталог — Строительные решения',
+    description: category ? category.description : 'Каталог металлоконструкций.',
+    keywords: category?.keywords,
+    canonical: category ? `https://строительные-решения.рф/catalog/${category.slug}` : undefined,
+    ogImage: category?.image,
+  })
 
   if (!category) return <Navigate to="/catalog" replace />
 
@@ -285,6 +295,12 @@ export function Category() {
         `}</style>
       </section>
 
+      <JsonLd data={buildFAQSchema(category.faq)} />
+      <JsonLd data={buildBreadcrumbSchema([
+        { name: 'Главная', path: '/' },
+        { name: 'Каталог', path: '/catalog' },
+        { name: category.name, path: `/catalog/${category.slug}` },
+      ])} />
       <ProductModal
         product={selectedProduct}
         categoryName={category.name}
