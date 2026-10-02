@@ -18,6 +18,7 @@ export const categories: Category[] = [
     heroDescription:
       'Навесы из металлопрофиля под ваши размеры — для авто, террасы, входной группы или хозяйственной зоны.',
     keywords: ['навес', 'навес для авто', 'навес для террасы', 'козырёк навес', 'металлический навес'],
+    image: 'https://i.postimg.cc/NGNMP42Q/230zc5xe176qrvty4sfb7l4yuz41ukh3.jpg',
     productTypes: [
       { id: '1-1', name: 'Навес для автомобиля', slug: 'naves-dlya-avto', description: 'Односкатный или двускатный навес для парковки автомобиля.', characteristics: ['Односкатная или двускатная конструкция', 'Каркас из профильной трубы'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['навес для авто', 'парковка', 'стоянка'], image: 'https://i.postimg.cc/44MTFqyZ/CAM01033-1030x773.jpg' },
       { id: '1-2', name: 'Навес для террасы', slug: 'naves-dlya-terrasy', description: 'Пристройной навес над террасой или зоной отдыха.', characteristics: ['Пристройная или standalone конструкция', 'Каркас из профильной трубы'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['навес для террасы', 'пристройной', 'зона отдыха'], image: 'https://i.postimg.cc/Pq86JVhw/ivyd6ocfud8.jpg' },
@@ -39,6 +40,7 @@ export const categories: Category[] = [
       'Изготавливаем ворота и калитки под ваши размеры — откатные, распашные, гаражные. Конструкция рассчитывается с учётом проёма и типа открывания.',
     heroDescription: 'Ворота и калитки под ваши размеры — откатные, распашные, гаражные.',
     keywords: ['ворота', 'откатные ворота', 'распашные ворота', 'калитка', 'гаражные ворота'],
+    image: 'https://i.postimg.cc/SRjypB2B/e9cdc115b1fb5c2b5a224ecc5ea1712e.jpg',
     productTypes: [
       { id: '2-1', name: 'Откатные ворота', slug: 'otkatnye-vorota', description: 'Сдвижные ворота для проёмов различной ширины.', characteristics: ['Сдвижной механизм', 'Каркас из профильной трубы'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['откатные', 'сдвижные', 'ворота'], image: 'https://i.postimg.cc/nrdK0qZw/c722b70fe62c190f045697275014c2a6.jpg' },
       { id: '2-2', name: 'Распашные ворота', slug: 'raspashnye-vorota', description: 'Классические распашные ворота с одной или двумя створками.', characteristics: ['Одностворчатые или двухстворчатые', 'Каркас из профильной трубы'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['распашные', 'ворота', 'створки'], image: 'https://i.postimg.cc/HxzbkbJW/45af8933f99046d918695ec7ca7988ab.jpg' },
@@ -60,6 +62,7 @@ export const categories: Category[] = [
       'Изготавливаем заборы и ограждения под ваши размеры — из профнастила, металлические, сварные. Конструкция рассчитывается с учётом периметра и рельефа.',
     heroDescription: 'Заборы и ограждения под ваши размеры — из профнастила, сварные, металлические.',
     keywords: ['забор', 'ограждение', 'забор из профнастила', 'сварной забор', 'металлический забор'],
+    image: 'https://i.postimg.cc/GhWbZSLb/ldy5gfyih1hkszclh300373o1nhzx42b.jpg',
     productTypes: [
       { id: '3-1', name: 'Забор из профнастила', slug: 'zabor-iz-profnastila', description: 'Забор с заполнением из профнастила.', characteristics: ['Каркас из профильной трубы', 'Заполнение — профнастил'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['профнастил', 'забор', 'ограждение'], image: 'https://i.postimg.cc/d0yYF9fM/16-grey-zabor-min.jpg' },
       { id: '3-2', name: 'Сварной забор', slug: 'svarnoy-zabor', description: 'Сварной забор с металлическим заполнением.', characteristics: ['Сварная конструкция', 'Каркас из профильной трубы'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['сварной', 'забор', 'металлический'], image: 'https://i.postimg.cc/BbZkj5mZ/image233.jpg' },
@@ -81,6 +84,7 @@ export const categories: Category[] = [
       'Изготавливаем металлические лестницы под ваши размеры — прямые, поворотные, винтовые. Конструкция рассчитывается с учётом помещения и нагрузок.',
     heroDescription: 'Металлические лестницы под ваши размеры — прямые, поворотные, винтовые.',
     keywords: ['лестница', 'металлическая лестница', 'винтовая лестница', 'поворотная лестница', 'лестница на второй этаж'],
+    image: 'https://i.postimg.cc/W31VMBnj/cvjfe9vsnmnmx1yyiw3rpa355f6a91oa.jpg',
     productTypes: [
       { id: '4-1', name: 'Прямая лестница', slug: 'pryamaya-lestnitsa', description: 'Прямая маршевая лестница на металлокаркасе.', characteristics: ['Маршевая конструкция', 'Каркас из профильной трубы'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['прямая', 'маршевая', 'лестница'], image: 'https://i.postimg.cc/TP3pRB66/images-(4).jpg' },
       { id: '4-2', name: 'Поворотная лестница', slug: 'povorotnaya-lestnitsa', description: 'Лестница с поворотом на 90° или 180°.', characteristics: ['Поворотная конструкция', 'Площадка или забежные ступени'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['поворотная', '90 градусов', 'лестница'], image: 'https://i.postimg.cc/1XwzCQpB/boston-dolle-antracyt.jpg' },
@@ -102,6 +106,7 @@ export const categories: Category[] = [
       'Изготавливаем козырьки под ваши размеры — над входом, окном, балконом. Конструкция рассчитывается с учётом крепления и нагрузок.',
     heroDescription: 'Козырьки под ваши размеры — над входом, окном, балконом.',
     keywords: ['козырёк', 'козырёк над входом', 'козырёк над окном', 'козырёк над балконом', 'металлический козырёк'],
+    image: 'https://i.postimg.cc/HnfC1VC6/25O0Ewu-IIWg.jpg',
     productTypes: [
       { id: '6-1', name: 'Козырёк над входом', slug: 'kozyrek-nad-vhodom', description: 'Козырёк над входной дверью или крыльцом.', characteristics: ['Консольный или на опорах', 'Каркас из профильной трубы'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['козырёк', 'вход', 'крыльцо'], image: 'https://i.postimg.cc/Ghy9MkcJ/images.jpg' },
       { id: '6-2', name: 'Козырёк над окном', slug: 'kozyrek-nad-oknom', description: 'Козырёк для защиты окна от осадков.', characteristics: ['Консольная конструкция', 'Каркас из профильной трубы'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['козырёк', 'окно', 'защита'], image: 'https://i.postimg.cc/8krr384K/2578.jpg' },
@@ -123,6 +128,7 @@ export const categories: Category[] = [
       'Изготавливаем гаражи и хозпостройки под ваши размеры — металлические гаражи, сараи, навесы-хозблоки. Конструкция рассчитывается с учётом назначения.',
     heroDescription: 'Гаражи и хозпостройки под ваши размеры — металлические гаражи, сараи, хозблоки.',
     keywords: ['гараж', 'металлический гараж', 'хозпостройка', 'сарай', 'хозблок'],
+    image: 'https://i.postimg.cc/2SNfHbGY/metallokarkas-avtoboksa-garazha-(2).jpg',
     productTypes: [
       { id: '7-1', name: 'Металлический гараж', slug: 'metallicheskiy-garazh', description: 'Гараж из металлопрофиля на металлокаркасе.', characteristics: ['Каркас из профильной трубы', 'Заполнение — профнастил или металл'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['гараж', 'металлический', 'профнастил'], image: 'https://i.postimg.cc/pdPh7prx/garage-1.jpg' },
       { id: '7-2', name: 'Хозблок', slug: 'hozblok', description: 'Хозяйственная постройка для хранения инструментов и материалов.', characteristics: ['Каркас из профильной трубы', 'Заполнение по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['хозблок', 'хозпостройка', 'сарай'], image: 'https://i.postimg.cc/jjV20CS9/10-1.jpg' },
@@ -144,6 +150,7 @@ export const categories: Category[] = [
       'Изготавливаем террасы и веранды под ваши размеры — каркасы, навесы, ограждения. Конструкция рассчитывается с учётом дома и участка.',
     heroDescription: 'Террасы и веранды под ваши размеры — каркасы, навесы, ограждения.',
     keywords: ['терраса', 'веранда', 'каркас террасы', 'навес для террасы', 'ограждение террасы'],
+    image: 'https://i.postimg.cc/Kcdz2YfJ/images-(8).jpg',
     productTypes: [
       { id: '8-1', name: 'Каркас террасы', slug: 'karkas-terrasy', description: 'Металлокаркас для террасы или веранды.', characteristics: ['Каркас из профильной трубы', 'Под настил по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['каркас', 'терраса', 'веранда'], image: 'https://i.postimg.cc/MKm0P2Kk/terassa-w-24.jpg' },
       { id: '8-2', name: 'Навес над террасой', slug: 'naves-nad-terrasoy', description: 'Навес для защиты террасы от осадков и солнца.', characteristics: ['Односкатная или двускатная конструкция', 'Каркас из профильной трубы'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['навес', 'терраса', 'крыша'], image: 'https://i.postimg.cc/DzJXKthg/images-(2).jpg' },
@@ -165,6 +172,7 @@ export const categories: Category[] = [
       'Изготавливаем беседки и павильоны под ваши размеры — открытые, закрытые, с навесом. Конструкция рассчитывается с учётом участка и назначения.',
     heroDescription: 'Беседки и павильоны под ваши размеры — открытые, закрытые, с навесом.',
     keywords: ['беседка', 'павильон', 'металлическая беседка', 'беседка с навесом', 'зона отдыха'],
+    image: 'https://i.postimg.cc/yYcNYzrD/images.jpg',
     productTypes: [
       { id: '9-1', name: 'Открытая беседка', slug: 'otkrytaya-besedka', description: 'Беседка с навесом без стен.', characteristics: ['Каркас из профильной трубы', 'Кровля по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['беседка', 'открытая', 'навес'], image: 'https://i.postimg.cc/k4jG6s7p/3bb54b6855190fe253a984653f5ba4aa.jpg' },
       { id: '9-2', name: 'Закрытая беседка', slug: 'zakrytaya-besedka', description: 'Беседка с частичным или полным остеклением.', characteristics: ['Каркас из профильной трубы', 'Остекление по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['беседка', 'закрытая', 'остекление'], image: 'https://i.postimg.cc/hjGPBmVj/images-(3).jpg' },
@@ -186,6 +194,7 @@ export const categories: Category[] = [
       'Изготавливаем металлокаркасы под ваши задачи — для террас, навесов, хозпостроек, технических конструкций. Конструкция рассчитывается с учётом нагрузок.',
     heroDescription: 'Металлокаркасы под ваши задачи — для террас, навесов, хозпостроек, технических конструкций.',
     keywords: ['металлокаркас', 'каркас', 'несущий каркас', 'технический каркас', 'профильная труба'],
+    image: 'https://i.postimg.cc/ZKtTQMYV/6rotm.jpg',
     productTypes: [
       { id: '10-1', name: 'Каркас под террасу', slug: 'karkas-pod-terrasu', description: 'Несущий металлокаркас под террасу или веранду.', characteristics: ['Каркас из профильной трубы', 'Под настил по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['каркас', 'терраса', 'веранда'], image: 'https://i.postimg.cc/zGM9Bgm3/1648996502-5-bigfoto-name-p-veranda-k-domu-proekti-iz-metallokonstrukt-7.jpg' },
       { id: '10-2', name: 'Каркас под навес', slug: 'karkas-pod-naves', description: 'Несущий каркас под навес или козырёк.', characteristics: ['Каркас из профильной трубы', 'Под кровлю по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['каркас', 'навес', 'козырёк'], image: 'https://i.postimg.cc/Jzy29zy8/p688563v1920x1080s0.jpg' },

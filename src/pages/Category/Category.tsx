@@ -54,7 +54,11 @@ export function Category() {
             </div>
             <div className="cat-hero-image">
               <Reveal delay={200}>
-                <Placeholder label={category.shortName.toUpperCase()} aspect="4/3" />
+                {category.image ? (
+                  <img src={category.image} alt={category.name} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', borderRadius: '12px' }} />
+                ) : (
+                  <Placeholder label={category.shortName.toUpperCase()} aspect="4/3" />
+                )}
               </Reveal>
             </div>
           </div>

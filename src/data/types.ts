@@ -7,6 +7,7 @@ export interface Category {
   description: string
   heroDescription: string
   keywords: string[]
+  image?: string
   productTypes: ProductType[]
   faq: { q: string; a: string }[]
 }

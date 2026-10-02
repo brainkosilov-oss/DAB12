@@ -11,7 +11,11 @@ export function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link to={`/catalog/${category.slug}`} className="cat-card">
       <div className="cat-card-image">
-        <Placeholder label={category.shortName.toUpperCase()} aspect="3/4" />
+        {category.image ? (
+          <img src={category.image} alt={category.name} loading="lazy" className="cat-card-img" />
+        ) : (
+          <Placeholder label={category.shortName.toUpperCase()} aspect="3/4" />
+        )}
       </div>
       <div className="cat-card-info">
         <div className="cat-card-header">
@@ -33,10 +37,12 @@ export function CategoryCard({ category }: CategoryCardProps) {
           overflow: hidden;
           border-radius: 12px;
         }
-        .cat-card-image .placeholder {
+        .cat-card-image .placeholder, .cat-card-img {
           transition: transform var(--t-med);
         }
-        .cat-card:hover .cat-card-image .placeholder {
+        .cat-card-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+        .cat-card:hover .cat-card-image .placeholder,
+        .cat-card:hover .cat-card-image .cat-card-img {
           transform: scale(1.04);
         }
         .cat-card-info {
