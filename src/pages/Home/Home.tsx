@@ -20,7 +20,7 @@ export function Home() {
         <div className="container hero-content">
           <Reveal>
             <span className="label label-accent hero-label">
-              ПРОИЗВОДСТВО МЕТАЛЛОКОНСТРУКЦИЙ
+              СТРОИТЕЛЬСТВО ЧАСТНЫХ ОБЪЕКТОВ
             </span>
           </Reveal>
           <Reveal delay={100}>
@@ -32,9 +32,7 @@ export function Home() {
           </Reveal>
           <Reveal delay={200}>
             <p className="body-lg hero-desc">
-              Изготавливаем металлоконструкции под ваши размеры.
-              <br />
-              Собственное производство, доставка и монтаж.
+              Возводим дома для частного проживания без переплат на посредников.
             </p>
           </Reveal>
           <Reveal delay={300}>
