@@ -14,9 +14,6 @@ export function Home() {
     <>
       {/* SECTION 01 — HERO */}
       <section className="hero dark">
-        <div className="hero-bg">
-          <Placeholder label="ПРОИЗВОДСТВО МЕТАЛЛОКОНСТРУКЦИЙ" aspect="auto" dark />
-        </div>
         <div className="container hero-content">
           <Reveal delay={100}>
             <h1 className="h1 hero-title">
@@ -62,23 +59,6 @@ export function Home() {
             align-items: flex-end;
             padding: 0 0 64px;
             overflow: hidden;
-          }
-          .hero-bg {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-          }
-          .hero-bg .placeholder {
-            border-radius: 0;
-            width: 100%;
-            height: 100%;
-            aspect-ratio: auto;
-          }
-          .hero-bg .placeholder::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(11,13,15,0.4) 0%, rgba(11,13,15,0.85) 70%, rgba(11,13,15,0.95) 100%);
           }
           .hero-content {
             position: relative;
