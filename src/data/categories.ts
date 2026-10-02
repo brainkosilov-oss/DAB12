@@ -197,6 +197,27 @@ export const categories: Category[] = [
       { q: 'Выполняете ли монтаж?', a: 'Да, мы выполняем доставку и монтаж.' },
     ],
   },
+  {
+    id: '11',
+    name: 'Дома',
+    nameGenitive: 'домов',
+    shortName: 'Дома',
+    slug: 'doma',
+    description:
+      'Строим дома под ваши размеры — каркасные, блочные, кирпичные. Конструкция рассчитывается с учётом проекта и участка.',
+    heroDescription: 'Дома под ваши размеры — каркасные, из блоков, кирпичные.',
+    keywords: ['дом', 'каркасный дом', 'дом из блоков', 'кирпичный дом', 'строительство дома'],
+    productTypes: [
+      { id: '11-1', name: 'Каркасный дом', slug: 'karkasnyy-dom', description: 'Каркасный дом по вашим размерам и проекту.', characteristics: ['Каркасная конструкция', 'Заполнение по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['каркасный дом', 'каркас', 'дом'], image: 'https://i.postimg.cc/rFpWYshs/barkas-140-vid-sboku-neokrashennyj.jpg' },
+      { id: '11-2', name: 'Дом из блоков', slug: 'dom-iz-blokov', description: 'Дом из блочных материалов под ваши размеры.', characteristics: ['Блочная кладка', 'Кровля по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['дом из блоков', 'блоки', 'дом'], image: 'https://i.postimg.cc/3rt0p7KW/orepp-2.jpg' },
+      { id: '11-3', name: 'Кирпичный дом', slug: 'kirpichnyy-dom', description: 'Кирпичный дом по вашим размерам и проекту.', characteristics: ['Кирпичная кладка', 'Кровля по выбору'], dimensions: DEFAULT_DIM, weight: DEFAULT_WEIGHT, material: DEFAULT_MATERIAL, coating: DEFAULT_COATING, priceLabel: DEFAULT_PRICE, keywords: ['кирпичный дом', 'кирпич', 'дом'], image: 'https://i.postimg.cc/NFFMb9gh/odnoetazhnyj-kirpichnyj-dom-ufa.jpg' },
+    ],
+    faq: [
+      { q: 'Можно ли построить дом по моему проекту?', a: 'Да, мы строим дома по вашим проектам и размерам.' },
+      { q: 'Какие материалы доступны?', a: 'Каркасные, блочные и кирпичные конструкции — выбор зависит от ваших задач.' },
+      { q: 'Выполняете ли монтаж?', a: 'Да, мы выполняем доставку и монтаж.' },
+    ],
+  },
 ]
 
 export function getCategoryBySlug(slug: string): Category | undefined {
