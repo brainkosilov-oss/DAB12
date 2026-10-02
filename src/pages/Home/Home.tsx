@@ -25,6 +25,9 @@ export function Home() {
               ОБЪЕКТОВ.
             </h1>
           </Reveal>
+          <Reveal delay={150}>
+            <p className="hero-subtitle">СТРОИМ САМИ СВОИМИ РУКАМИ</p>
+          </Reveal>
           <Reveal delay={200}>
             <p className="body-lg hero-desc">
               Возводим дома для частного проживания без переплат на посредников.
@@ -87,6 +90,14 @@ export function Home() {
           }
           .hero-label { line-height: 1.6; }
           .hero-title { font-size: clamp(48px, 9vw, 96px); }
+          .hero-subtitle {
+            font-size: clamp(16px, 2vw, 22px);
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--c-accent);
+            margin-top: -4px;
+          }
           .hero-desc { color: var(--c-text-dark-secondary); max-width: 480px; }
           .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
           .hero-stats {
