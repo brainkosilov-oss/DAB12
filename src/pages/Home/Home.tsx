@@ -345,7 +345,7 @@ export function Home() {
             </div>
             <div className="home-production-right">
               <Reveal delay={200}>
-                <Placeholder label="ПРОИЗВОДСТВО" aspect="4/3" dark />
+                <img src="https://i.postimg.cc/V6tH34Db/Konstruktiv-proekt-1.jpg" alt="Собственное производство металлоконструкций" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12, aspectRatio: '4/3' }} />
               </Reveal>
             </div>
           </div>
