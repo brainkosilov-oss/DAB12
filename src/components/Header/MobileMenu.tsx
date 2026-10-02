@@ -11,7 +11,6 @@ interface MobileMenuProps {
 
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
   const navItems = [
-    { label: 'Работы', to: '/works' },
     { label: 'Производство', to: '/production' },
     { label: 'О компании', to: '/about' },
     { label: 'Доставка и монтаж', to: '/delivery-installation' },

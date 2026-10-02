@@ -40,7 +40,6 @@ export function Header() {
   const navItems = [
     { label: 'Каталог изделий', action: 'mega', megaKey: 'products' as const, to: '/catalog' },
     { label: 'Каталог услуг', action: 'mega', megaKey: 'services' as const, to: '/services' },
-    { label: 'Работы', to: '/works' },
     { label: 'Производство', to: '/production' },
     { label: 'О компании', to: '/about' },
     { label: 'Контакты', to: '/contacts' },
