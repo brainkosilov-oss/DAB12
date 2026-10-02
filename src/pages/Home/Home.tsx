@@ -18,11 +18,6 @@ export function Home() {
           <Placeholder label="ПРОИЗВОДСТВО МЕТАЛЛОКОНСТРУКЦИЙ" aspect="auto" dark />
         </div>
         <div className="container hero-content">
-          <Reveal>
-            <span className="label label-accent hero-label">
-              СТРОИТЕЛЬСТВО ЧАСТНЫХ ОБЪЕКТОВ
-            </span>
-          </Reveal>
           <Reveal delay={100}>
             <h1 className="h1 hero-title">
               СТРОИТЕЛЬСТВО<br />
