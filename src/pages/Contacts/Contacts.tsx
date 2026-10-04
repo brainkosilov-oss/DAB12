@@ -110,17 +110,27 @@ export function Contacts() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <Reveal>
-            <div className="contacts-map" style={{ width: '100%', height: '450px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--c-border)', background: '#e8e8e8' }}>
-              <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=60.530%2C57.010%2C60.560%2C57.025&layer=mapnik&marker=57.017%2C60.542"
-                width="100%"
-                height="450"
-                style={{ border: '0', display: 'block' }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Карта — Верхняя Пышма, ул. 2-я Пролетарская"
-              />
+            <div className="contacts-map" style={{ width: '100%', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--c-border)', position: 'relative' }}>
+              <a
+                href="https://yandex.ru/maps/?text=Верхняя%20Пышма%2C%20улица%20Пролетарская%201"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'block', position: 'relative' }}
+              >
+                <img
+                  src="/map-verkhnyaya-pyshma.webp"
+                  alt="Карта — Верхняя Пышма, ул. Пролетарская, 1"
+                  style={{ width: '100%', display: 'block', height: '450px', objectFit: 'cover' }}
+                  loading="lazy"
+                />
+                <span style={{
+                  position: 'absolute', bottom: '16px', left: '16px',
+                  background: 'rgba(0,0,0,0.7)', color: '#fff',
+                  padding: '8px 18px', borderRadius: '8px', fontSize: '14px', fontWeight: 600,
+                }}>
+                  Открыть карту →
+                </span>
+              </a>
             </div>
           </Reveal>
         </div>

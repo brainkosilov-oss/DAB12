@@ -591,17 +591,27 @@ export function Home() {
                 </div>
               </Reveal>
               <Reveal delay={300}>
-                <div className="home-contacts-map" style={{ width: '100%', height: '100%', minHeight: '300px', borderRadius: '12px', overflow: 'hidden', background: '#e8e8e8' }}>
-                  <iframe
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=60.530%2C57.010%2C60.560%2C57.025&layer=mapnik&marker=57.017%2C60.542"
-                    width="100%"
-                    height="100%"
-                    style={{ border: '0', display: 'block', minHeight: '300px' }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Карта — Верхняя Пышма, ул. 2-я Пролетарская"
-                  />
+                <div className="home-contacts-map" style={{ width: '100%', borderRadius: '12px', overflow: 'hidden', position: 'relative' }}>
+                  <a
+                    href="https://yandex.ru/maps/?text=Верхняя%20Пышма%2C%20улица%20Пролетарская%201"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: 'block', position: 'relative' }}
+                  >
+                    <img
+                      src="/map-verkhnyaya-pyshma.webp"
+                      alt="Карта — Верхняя Пышма, ул. Пролетарская, 1"
+                      style={{ width: '100%', display: 'block', minHeight: '300px', objectFit: 'cover' }}
+                      loading="lazy"
+                    />
+                    <span style={{
+                      position: 'absolute', bottom: '12px', left: '12px',
+                      background: 'rgba(0,0,0,0.7)', color: '#fff',
+                      padding: '6px 14px', borderRadius: '8px', fontSize: '13px', fontWeight: 600,
+                    }}>
+                      Открыть карту →
+                    </span>
+                  </a>
                 </div>
               </Reveal>
             </div>
