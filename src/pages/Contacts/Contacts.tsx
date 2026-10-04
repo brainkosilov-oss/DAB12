@@ -1,6 +1,5 @@
 import { Reveal } from '../../components/Reveal'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
-import { Placeholder } from '../../components/Placeholder'
 import { LeadForm } from '../../components/LeadForm/LeadForm'
 import { useSEO } from '../../hooks/useSEO'
 import { companyInfo } from '../../data/site'
@@ -112,7 +111,15 @@ export function Contacts() {
         <div className="container">
           <Reveal>
             <div className="contacts-map">
-              <Placeholder label="КАРТА" aspect="21/9" />
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=60.542%2C57.017&z=15&text=Верхняя%20Пышма%2C%20улица%202-я%20Пролетарская"
+                width="100%"
+                height="450"
+                frameBorder="0"
+                allowFullScreen
+                style={{ border: 'none', borderRadius: '16px', display: 'block' }}
+                title="Карта — Верхняя Пышма, ул. 2-я Пролетарская"
+              />
             </div>
           </Reveal>
         </div>
