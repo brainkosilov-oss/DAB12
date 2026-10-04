@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Reveal } from '../../components/Reveal'
 import { SectionHeader } from '../../components/SectionHeader'
-import { Placeholder } from '../../components/Placeholder'
 import { LeadForm } from '../../components/LeadForm/LeadForm'
 import { CategoryCard } from '../../components/CategoryCard'
 import { FAQ } from '../../components/FAQ'
@@ -592,8 +591,17 @@ export function Home() {
                 </div>
               </Reveal>
               <Reveal delay={300}>
-                <div className="home-contacts-map">
-                  <Placeholder label="КАРТА" aspect="4/3" dark />
+                <div className="home-contacts-map" style={{ width: '100%', height: '100%', minHeight: '300px', borderRadius: '12px', overflow: 'hidden' }}>
+                  <iframe
+                    src="https://www.google.com/maps?q=Верхняя+Пышма+улица+2-я+Пролетарская&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: '0', display: 'block', minHeight: '300px' }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Карта — Верхняя Пышма, ул. 2-я Пролетарская"
+                  />
                 </div>
               </Reveal>
             </div>
