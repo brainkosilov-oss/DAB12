@@ -593,14 +593,14 @@ export function Home() {
               <Reveal delay={300}>
                 <div className="home-contacts-map" style={{ width: '100%', borderRadius: '12px', overflow: 'hidden', position: 'relative' }}>
                   <a
-                    href="https://yandex.ru/maps/?text=Верхняя%20Пышма%2C%20улица%20Пролетарская%201"
+                    href="https://yandex.ru/maps/?text=Верхняя%20Пышма%2C%20улица%202-я%20Пролетарская"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ display: 'block', position: 'relative' }}
                   >
                     <img
                       src="/map-verkhnyaya-pyshma.webp"
-                      alt="Карта — Верхняя Пышма, ул. Пролетарская, 1"
+                      alt="Карта — Верхняя Пышма, ул. 2-я Пролетарская"
                       style={{ width: '100%', display: 'block', minHeight: '300px', objectFit: 'cover' }}
                       loading="lazy"
                     />

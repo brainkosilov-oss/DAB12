@@ -29,7 +29,7 @@ export function buildLocalBusinessSchema() {
     email: companyInfo.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'ул. Пролетарская, 1',
+      streetAddress: 'ул. 2-я Пролетарская',
       addressLocality: 'Верхняя Пышма',
       addressRegion: 'Свердловская область',
       addressCountry: 'RU',

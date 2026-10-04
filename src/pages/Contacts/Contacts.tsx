@@ -8,7 +8,7 @@ import { Phone, Mail, MapPin, Send } from '../../components/Icons'
 export function Contacts() {
   useSEO({
     title: 'Контакты — Строительные решения | Екатеринбург',
-    description: 'Контакты: телефон, email, Telegram, WhatsApp. Верхняя Пышма, ул. Пролетарская, 1. Работаем по всем регионам России.',
+    description: 'Контакты: телефон, email, Telegram, WhatsApp. Верхняя Пышма, ул. 2-я Пролетарская. Работаем по всем регионам России.',
     keywords: ['контакты', 'телефон', 'email', 'Telegram', 'WhatsApp', 'Екатеринбург', 'Верхняя Пышма'],
     canonical: 'https://строительные-решения.рф/contacts',
   })
@@ -112,14 +112,14 @@ export function Contacts() {
           <Reveal>
             <div className="contacts-map" style={{ width: '100%', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--c-border)', position: 'relative' }}>
               <a
-                href="https://yandex.ru/maps/?text=Верхняя%20Пышма%2C%20улица%20Пролетарская%201"
+                href="https://yandex.ru/maps/?text=Верхняя%20Пышма%2C%20улица%202-я%20Пролетарская"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ display: 'block', position: 'relative' }}
               >
                 <img
                   src="/map-verkhnyaya-pyshma.webp"
-                  alt="Карта — Верхняя Пышма, ул. Пролетарская, 1"
+                  alt="Карта — Верхняя Пышма, ул. 2-я Пролетарская"
                   style={{ width: '100%', display: 'block', height: '450px', objectFit: 'cover' }}
                   loading="lazy"
                 />
