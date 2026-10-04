@@ -110,22 +110,20 @@ export function Contacts() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <Reveal>
-            <div className="contacts-map">
+            <div className="contacts-map" style={{ width: '100%', height: '450px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--c-border)' }}>
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=60.542%2C57.017&z=15&text=Верхняя%20Пышма%2C%20улица%202-я%20Пролетарская"
+                src="https://www.google.com/maps?q=Верхняя+Пышма+улица+2-я+Пролетарская&output=embed"
                 width="100%"
                 height="450"
-                frameBorder="0"
+                style={{ border: '0', display: 'block' }}
                 allowFullScreen
-                style={{ border: 'none', borderRadius: '16px', display: 'block' }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
                 title="Карта — Верхняя Пышма, ул. 2-я Пролетарская"
               />
             </div>
           </Reveal>
         </div>
-        <style>{`
-          .contacts-map { border-radius: 16px; overflow: hidden; }
-        `}</style>
       </section>
     </div>
   )
