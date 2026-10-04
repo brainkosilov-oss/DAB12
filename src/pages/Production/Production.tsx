@@ -38,7 +38,7 @@ export function Production() {
             </div>
             <Reveal delay={150}>
               <div className="prod-hero-right">
-                <img src="https://i.postimg.cc/V6tH34Db/Konstruktiv-proekt-1.jpg" alt="Собственное производство металлоконструкций" className="prod-hero-photo" />
+                <img src="/images/catalog/misc/Konstruktiv-proekt-1.jpg" alt="Собственное производство металлоконструкций" className="prod-hero-photo" />
               </div>
             </Reveal>
           </div>
@@ -84,7 +84,7 @@ export function Production() {
             </Reveal>
             <Reveal delay={100}>
               <div className="prod-image">
-                <img src="https://i.postimg.cc/T36Zj82T/551bf6c0d919df31a29c5ab21af3772f.jpg" alt="Производство металлоконструкций" className="prod-photo" />
+                <img src="/images/catalog/misc/551bf6c0d919df31a29c5ab21af3772f.jpg" alt="Производство металлоконструкций" className="prod-photo" />
               </div>
             </Reveal>
           </div>

@@ -81,7 +81,7 @@ export function About() {
             </Reveal>
             <Reveal delay={100}>
               <div className="about-image">
-                <img src="https://i.postimg.cc/XN8rwWkg/images-(9).jpg" alt="Строительные решения" style={{ width: '100%', borderRadius: '16px', aspectRatio: '4/3', objectFit: 'cover' }} />
+                <img src="/images/catalog/misc/images-(9).jpg" alt="Строительные решения" style={{ width: '100%', borderRadius: '16px', aspectRatio: '4/3', objectFit: 'cover' }} />
               </div>
             </Reveal>
           </div>
