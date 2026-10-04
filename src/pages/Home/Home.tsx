@@ -591,9 +591,9 @@ export function Home() {
                 </div>
               </Reveal>
               <Reveal delay={300}>
-                <div className="home-contacts-map" style={{ width: '100%', height: '100%', minHeight: '300px', borderRadius: '12px', overflow: 'hidden' }}>
+                <div className="home-contacts-map" style={{ width: '100%', height: '100%', minHeight: '300px', borderRadius: '12px', overflow: 'hidden', background: '#e8e8e8' }}>
                   <iframe
-                    src="https://www.google.com/maps?q=Верхняя+Пышма+улица+2-я+Пролетарская&output=embed"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=60.530%2C57.010%2C60.560%2C57.025&layer=mapnik&marker=57.017%2C60.542"
                     width="100%"
                     height="100%"
                     style={{ border: '0', display: 'block', minHeight: '300px' }}
